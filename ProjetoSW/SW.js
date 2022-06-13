@@ -1,14 +1,18 @@
-var perfil=document.getElementById("perfil")
+window.onload=function(){
+var perfil=document.getElementById("per")
+
 
 function perfill(){
-    let div= document.createElement("div")
-    let button= document.createElement('button');
-    button.textContent="entrar";
-    div.appendChild(button);
-    document.body.appendChild(div);
+    let login=document.getElementById("div-log").className="aparece";
     
    
 }
+function per(){
+  let login=document.getElementById("div-log").className="desaparece";
 
+}
 
 perfil.addEventListener("mouseover", perfill);
+
+perfil.addEventListener("mouseleave", per);
+}
