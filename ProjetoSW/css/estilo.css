@@ -29,26 +29,26 @@
 
 }
   
-.button-principal:hover{
-  background: #dcdcdc;
-}
-.button-principal{
-  background: white;
-  border: none;
-  position: relative;
-  right: 10px;
-  bottom:1px;
- 
-  border-radius: 4px;
-  padding: 10px;
-  padding-top: 7px;
-  height: 38px;
-}
-#botao-cadastre-se, #botao-login{
-  color: white;
-  border: none;
-  background: none;
-}  
+  .button-principal:hover{
+    background: #dcdcdc;
+  }
+  .button-principal{
+    background: white;
+    border: none;
+    position: relative;
+    right: 10px;
+    bottom:1px;
+   
+    border-radius: 4px;
+    padding: 10px;
+    padding-top: 7px;
+    height: 38px;
+  }
+  #botao-cadastre-se, #botao-login{
+    color: white;
+    border: none;
+    background: none;
+  }  
 a{
   text-decoration: none;
 }
@@ -65,19 +65,38 @@ a:hover{
 .li-pri{
   padding-left: 10px;
   margin-left: 10px;
+  margin-top: 3px;
 
 }
 #perfil{
-  height: 30px;
-  width: 35px;
-  margin-top: 12px;
-  padding-left: 6px;
+color: white;
+padding: 10px;
 
 }
+#coracao{
+  padding-top: 12px;
+  color: red;
+  
+}
+
+
+#botao_perfil{
+  padding: 5px;
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: white;
+
+}
+#botao_perfil:hover{
+  border: none;
+}
 #per{
-  background: white;
-  border-radius: 20px;
+  margin-top: 3px;
+  background: black;
+ width: 110px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 
