@@ -3,16 +3,11 @@ var perfil=document.getElementById("per")
 
 
 function perfill(){
-    let login=document.getElementById("div-log").className="aparece";
-    
+window.open("login.html", "_self")   
    
 }
-function per(){
-  let login=document.getElementById("div-log").className="desaparece";
 
-}
 
-perfil.addEventListener("mouseover", perfill);
+perfil.addEventListener("click", perfill);
 
-perfil.addEventListener("mouseleave", per);
 }

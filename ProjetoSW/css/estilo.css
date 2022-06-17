@@ -28,44 +28,7 @@
 
 
 }
-a{
-  text-decoration: none;
-}
-a:hover{
-  text-decoration: none;
-}
-.form-login{
-  margin-top: 10px;
-  height: 32px;
-  padding: 2px;
-  border-radius: 3px;
-  border: 1px solid #dcdcdc;
-}
-.botao-login{
-  margin-top: 5px;
-  width: 185px;
-  padding: 2px;
-  border-radius: 5px;
-  color: white;
-  border: 1px solid var(--color);
-  padding: 3px;
-}
-.botao-login_2{
-  margin-top: 30px;
-  width: 184px;
-  border-radius: 5px;
-  padding: 2px;
-  border: 1px solid var(--color);
-  background: var(--color);
-  height: 30px;
- 
-}
-.botao-login_2 a{
-  color: white;
-}
-
-
-
+  
 .button-principal:hover{
   background: #dcdcdc;
 }
@@ -85,7 +48,14 @@ a:hover{
   color: white;
   border: none;
   background: none;
+}  
+a{
+  text-decoration: none;
 }
+a:hover{
+  text-decoration: none;
+}
+
 .nave-principal{
 
   margin-bottom: 8px;
@@ -109,26 +79,9 @@ a:hover{
   border-radius: 20px;
   cursor: pointer;
 }
-.div-login{
-  
- display: none;
-}
-.aparece{
-  position: absolute;
-  display: hidden;
-  left: 83%;
-  top: 11%;
-  border: 1px solid var(--color);
- width: 210px;
- height: 210px;
-  padding-left: 12px;
-  padding-top: 8px;
- background: #dcdcdc;
- border-radius: 5px;
-}
-.desaparece{
-  display: none;
-}
+
+
+
 
 @media only screen and (min-width:1000px){
   .meu{
