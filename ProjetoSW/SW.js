@@ -8,7 +8,7 @@ window.open("login.html", "_self")
 }
 
 function per(){
-    perfil.style.background= "rgba(000, 000, 000, 0.6)"
+    perfil.style.background= "rgba(000, 000, 000, 0.3)"
 }
 function pern(){
     perfil.style.background="";
