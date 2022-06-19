@@ -1,21 +1,17 @@
 window.onload=function(){
-var perfil=document.getElementById("per")
+var perfil=document.getElementById("per");
 
 
 function perfill(){
-window.open("login.html", "_self")   
+login.className="caixa-login";  
    
 }
+function perfilsome(){
+    login.className="caixa-login-some";  
 
-function per(){
-    perfil.style.background= "rgba(000, 000, 000, 0.3)"
-}
-function pern(){
-    perfil.style.background="";
 }
 
 perfil.addEventListener("click", perfill);
-perfil.addEventListener("mouseover", per);
-perfil.addEventListener("mouseleave", pern);
+
 
 }

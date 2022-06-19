@@ -1,25 +1,43 @@
-*{
+/*estilizações gerais*/
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
-.root{
+
+.root {
   --color: #dcdcdc;
-  --color2: white; 
+  --color2: white;
 }
 
+.flex {
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/*primeira barra de navegação*/
+.navegacao-1{
+  background: #82DE0B;
+}
 .logo {
   width: 100px;
 
   position: relative;
   top: -3px;
 }
-.flex{
-  display: flex;
-}
 
-
-.meu{
+.meu {
   height: 38px;
   position: relative;
   bottom: 1px;
@@ -28,94 +46,141 @@
 
 
 }
-  
-  .button-principal:hover{
-    background: #dcdcdc;
-  }
-  .button-principal{
-    background: white;
-    border: none;
-    position: relative;
-    right: 10px;
-    bottom:1px;
-   
-    border-radius: 4px;
-    padding: 10px;
-    padding-top: 7px;
-    height: 38px;
-  }
-  #botao-cadastre-se, #botao-login{
-    color: white;
-    border: none;
-    background: none;
-  }  
-a{
-  text-decoration: none;
-}
-a:hover{
-  text-decoration: none;
+
+.button-principal:hover {
+  background: #dcdcdc;
 }
 
-.nave-principal{
+.button-principal {
+  background: white;
+  border: none;
+  position: relative;
+  right: 10px;
+  bottom: 1px;
+
+  border-radius: 4px;
+  padding: 10px;
+  padding-top: 7px;
+  height: 38px;
+}
+
+#botao-vaga,
+#botao-ajuda {
+  color: white;
+  border: none;
+  background: none;
+}
+
+#botao-vaga {
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+
+
+
+}
+
+#botao-vaga:hover {
+  background: rgba(000, 000, 000, 0.3);
+}
+
+
+.nave-principal {
 
   margin-bottom: 8px;
-   margin-left: 10px;
+  margin-left: 10px;
 
 }
-.li-pri{
+
+.li-pri {
   padding-left: 10px;
   margin-left: 10px;
-  margin-top: 3px;
+  margin-top: 5px;
 
 }
-#perfil{
-color: white;
-padding: 10px;
+
+#perfil {
+  position: relative;
+  color: black;
+  padding: 10px;
+  padding-left: 5px;
+  margin-top: 2px;
 
 }
-#coracao{
+
+#coracao {
   padding-top: 12px;
   color: red;
-  
+
 }
 
 
-#botao_perfil{
-  padding: 5px;
-  background: none;
-  border: none;
-  font-size: 13px;
-  color: white;
-
-}
-#botao_perfil:hover{
-  border: none;
-}
-#per{
+#per {
   margin-top: 3px;
-  background: black;
- width: 110px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 20px;
+  background: white;
+  height: 45px;
+  width: 45px;
 }
 
+.caixa-login{
+  border: 1px solid #dcdcdc;
+  width: 200px;
+  height: 200px;
+  background: white;
+  position: absolute;
+  top: 80%;
+  left: 83%;
+  border-radius: 5px;
 
+}
+.caixa-login-some{
+  display:none;
+}
 
+/* segunda barra de navegação*/
+.navegacao {
+  background: #D7F5C6;
+}
 
-@media only screen and (min-width:1000px){
-  .meu{
+.ul-2 {
+  margin-left: 20px;
+}
+
+.lista-2 {
+  padding: 4px;
+  padding-left: 20px;
+  margin-left: 20px;
+
+}
+
+.link-li2{
+  color: #343B30;
+  padding:5px;
+
+}
+.link-li2:hover{
+  color: #343B30;
+  background: rgba(128, 128, 128, 0.4);
+}
+
+@media only screen and (min-width:1000px) {
+  .meu {
     width: 700px;
   }
 }
 
-@media only screen and (min-width:523px) and (max-width: 1000px){
-  .meu{
+@media only screen and (min-width:523px) and (max-width: 1000px) {
+  .meu {
     width: 500px;
   }
 
 }
-@media only screen and (min-width:360px) and (max-width: 523px){
-  .meu{
+
+@media only screen and (min-width:360px) and (max-width: 523px) {
+  .meu {
     width: 200px;
   }
 
