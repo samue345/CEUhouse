@@ -1,0 +1,40 @@
+
+#filtros{
+    margin-top: 5%;
+    margin-left: 20%;
+   
+    width: 500px;
+    height: 500px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+}
+p{
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+}
+
+.listap{
+    padding: 20px;
+    font-size: 18px;
+
+}
+.inputp{
+    margin-left: 5px;
+    position: relative;
+    top: 4px;
+    height: 20px;
+    width: 20px;
+}
+.salvar{
+    width: 400px;
+    height: 30px;
+    background: #82DE0B;
+    border-radius: 5px;
+    margin-left: 8%;
+    color: white;
+    border: 1px solid #dcdcdc;
+}
+.div-1f, .div-2f{
+  margin-left: 9%;
+}

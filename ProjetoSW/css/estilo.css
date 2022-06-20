@@ -128,12 +128,18 @@ a:hover {
 .caixa-login{
   border: 1px solid #dcdcdc;
   width: 200px;
-  height: 200px;
+  height: 100px;
   background: white;
   position: absolute;
-  top: 80%;
-  left: 83%;
+  top: 73%;
+  left: 84%;
   border-radius: 5px;
+
+}
+.entrar, .cadastre{
+  color: #343B30;
+  padding: 5px;
+  font-size: 20px;
 
 }
 .caixa-login-some{
@@ -153,7 +159,11 @@ a:hover {
   padding: 4px;
   padding-left: 20px;
   margin-left: 20px;
+  cursor: pointer;
 
+}
+.lista-2:hover{
+  background: rgba(128, 128, 128, 0.4);
 }
 
 .link-li2{
@@ -163,7 +173,6 @@ a:hover {
 }
 .link-li2:hover{
   color: #343B30;
-  background: rgba(128, 128, 128, 0.4);
 }
 
 @media only screen and (min-width:1000px) {

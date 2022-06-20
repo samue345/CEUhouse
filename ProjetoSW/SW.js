@@ -1,17 +1,24 @@
 window.onload=function(){
-var perfil=document.getElementById("per");
+ var fil= document.querySelector("#filtro");
+var per=document.getElementById("per");
 
 
-function perfill(){
+function perfil(){
 login.className="caixa-login";  
    
 }
-function perfilsome(){
-    login.className="caixa-login-some";  
+function apaga(){
+    login.className="caixa-login-some"
+}
+function filtro(){
+
+    window.open("filtro.html", "self", "width=750, height=800");
 
 }
 
-perfil.addEventListener("click", perfill);
+per.addEventListener("mouseover", perfil);
+per.addEventListener("mouseleave", apaga);
+fil.addEventListener("click", filtro);
 
 
 }
