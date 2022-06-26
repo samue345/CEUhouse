@@ -58,6 +58,7 @@ a, a:hover{
     color: white;
     border: 1px solid var(--color);
     padding: 3px;
+    background: #82DE0B;
   }
   .botao-login_2{
     color: white;
@@ -66,7 +67,7 @@ a, a:hover{
     border-radius: 5px;
     padding: 2px;
     border: 1px solid var(--color);
-    background: var(--color);
+    background: #82DE0B;
     height: 30px;
    
   }

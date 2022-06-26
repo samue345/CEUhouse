@@ -175,6 +175,100 @@ a:hover {
   color: #343B30;
 }
 
+/*pagina anuncio*/
+
+.formulario_anuncio{
+  margin: 10px;
+}
+.in-anu{
+  margin: 10px;
+  padding: 3px;
+  width: 600px;
+}
+.animais{
+  margin-left: 8px;
+  width: 15px;
+  height: 15px;
+}
+.animal{
+font-size: 20px;
+margin-left: 8px;
+
+}
+.escolha{
+  position: relative;
+  bottom: 3px;
+  left: 8px;
+}
+.imagens-g{
+
+  border: 1px solid #dcdcdc;
+  width: 755px;
+  margin: 15px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:  rgba(120, 120, 120, 0.2);
+}
+.texto{
+  margin: 15px;
+}
+
+/*pagina de cadastramento*/
+.h1_cadastro{
+  left: 41%;
+  font-size: 40px;
+  letter-spacing: 0.6rem;
+  position: absolute;
+  bottom: 84%;
+  color: #82DE0B;
+}
+
+.formulario-cadastro {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  align-items: center;
+}
+
+.nome_usuario, .email_usuario, .data_usuario, .cadastro_envio{
+  width: 400px;
+  padding: 10px;
+  margin: 10px;
+  height: 50px;
+}
+
+.para-polticas{
+  position: absolute;
+  bottom: 36%;
+  left: 37.3%;
+  font-size: 17px;
+  display: inline;
+  cursor: pointer;
+}
+
+.check_politicas{
+  position: absolute;
+  bottom: 39%;
+  left: 35.5%;
+  width: 20px;
+  height: 20px;
+
+}
+
+.cadastro_envio{
+  position: absolute;
+  top: 68%;
+  background: #82DE0B;
+  border-radius: 2px;
+  border: 1px solid #dcdcdc;
+  cursor: pointer;
+  color: #D7F5C6;
+}
+.cadastro_envio:hover{
+  background: rgba(200, 200, 200, 0.1);
+}
 @media only screen and (min-width:1000px) {
   .meu {
     width: 700px;
