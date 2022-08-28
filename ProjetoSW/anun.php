@@ -60,7 +60,7 @@
       </header>
 
       <section>
-        <form class="formulario_anuncio">
+        <form class="formulario_anuncio" action="index_controller.php" method="$_POST">
             <input type="text" placeholder="nome" class="in-anu">
             <br>
             <input type="text" placeholder="sobrenome" class="in-anu">
@@ -89,7 +89,7 @@
             <section class="imagens-g">
               <input type="file">
             </section>
-          
+            <button type="submit">Enviar</button>
         </form>
       </section>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
