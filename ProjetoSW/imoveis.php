@@ -3,9 +3,11 @@ class moveis
 {
     private $matricula;
     private  $id_matricula;
-    private $cpf;
     private  $apartamento;
-
+    private $nome_anfitriao;
+    private $bloco;
+    private $numero_de_pessoas;
+    private $fotos;
     public function __get($atributo)
     {
         return $this->$atributo;

@@ -60,10 +60,10 @@
       </header>
 
       <section>
-        <form class="formulario_anuncio" action="index_controller.php" method="$_POST">
-            <input type="text" placeholder="nome" class="in-anu">
+        <form class="formulario_anuncio" action="imoveis_controller.php" method="post">
+            <input type="text" placeholder="nome" class="in-anu" name="nome">
             <br>
-            <input type="text" placeholder="sobrenome" class="in-anu">
+            <input type="text" placeholder="sobrenome" class="in-anu" name="sobre">
             <br>
             <input type="text" placeholder="Número da matricula" class="in-anu">
             <br>
@@ -71,7 +71,7 @@
             <br>
             <input type="text" placeholder="bloco"  class="in-anu">
             <br>
-            <input type="text" placeholder="apartarmento"  class="in-anu">
+            <input type="text" placeholder="apartarmento"  class="in-anu" name="apar">
             <br>
             <p class="animal">animais:</p>
               <span class="escolha">sim</span>
