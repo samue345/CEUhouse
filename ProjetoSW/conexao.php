@@ -10,8 +10,8 @@
     {
         try
         {
-          $conexao = new PDO("mysql:host=$this->host;dbname=$this->dbname", "$this->usuario", "$this->senha");
-          return $conexao;
+          $cone = new PDO("mysql:host=$this->host;dbname=$this->dbname", "$this->usuario", "$this->senha");
+          return $cone;
       
         }
         catch(PDOException $e)

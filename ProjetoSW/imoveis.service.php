@@ -1,13 +1,17 @@
 <?php
 class imoveisService
 {
-    public function __construct($conexao, $imoveis)
+    private $conexao;
+    private $imoveis;
+    public function __construct(Conexao $conexao, Imoveis $imoveis)
     {
-        
+        $this->conexao=$conexao->conectar();
+        $this->imoveis=$imoveis;
     }
+
     public function criar()
     {
-
+        
     } 
     public function recuperar()
     {

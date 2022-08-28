@@ -1,5 +1,5 @@
 <?php
-class moveis
+class imoveis
 {
     private $matricula;
     private  $id_matricula;
