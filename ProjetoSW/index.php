@@ -85,7 +85,7 @@ require_once "imoveis_controller.php";
     </ul>
 
   </nav>
-<div class="flex">
+<div class="grid_d">
   <? foreach ($tarefas as $key => $tarefa) { ?>
       <div class="index_card">
         <section>
