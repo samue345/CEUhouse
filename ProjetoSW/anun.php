@@ -74,7 +74,7 @@ session_start();
       <?} ?>
    
       <section>
-        <form class="formulario_anuncio" action="imoveis_controller.php" method="post">
+        <form class="formulario_anuncio" action="imoveis_controller.php?acao=inserir" method="post">
             <input type="text" placeholder="nome" class="in-anu" name="nome_anfitriao">
             <br>
             <input type="text" placeholder="sobrenome" class="in-anu" name="sobre">

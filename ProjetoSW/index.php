@@ -1,7 +1,6 @@
 <?php
-  session_start();
-  echo $_SESSION['criada'];
-
+  $acao='recuperar';
+  require_once "imoveis_controller.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">
