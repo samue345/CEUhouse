@@ -16,6 +16,7 @@ $imoveis->__set("numero_de_pessoas", $_POST['numero_de_pessoas']);
 $conexao= new Conexao();
 $imoveisService= new imoveisService($conexao, $imoveis);
 $imoveisService->criar();
+header("location: anun.php?criou=1");
 
 
 

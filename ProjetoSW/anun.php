@@ -57,7 +57,13 @@
           </div>
         </nav>
     
-      </header>
+      </header> 
+      <? if(isset($_GET['criou']) && $_GET['criou']==1) {?>
+        
+      <section class="sucesso">
+        <h5 class="suc">Republica criada!</h5>
+      </section>
+      <?} ?>
 
       <section>
         <form class="formulario_anuncio" action="imoveis_controller.php" method="post">
