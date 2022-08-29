@@ -4,6 +4,7 @@
  {
     private $host='localhost';
     private  $usuario='root';
+    private $dbname='republicas';
     private $senha='';
 
     public function conectar()

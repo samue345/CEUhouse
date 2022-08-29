@@ -61,15 +61,15 @@
 
       <section>
         <form class="formulario_anuncio" action="imoveis_controller.php" method="post">
-            <input type="text" placeholder="nome" class="in-anu" name="nome">
+            <input type="text" placeholder="nome" class="in-anu" name="nome_anfitriao">
             <br>
             <input type="text" placeholder="sobrenome" class="in-anu" name="sobre">
             <br>
-            <input type="text" placeholder="Número da matricula" class="in-anu">
+            <input type="text" placeholder="Número da matricula" class="in-anu" name="matricula">
             <br>
-            <input type="text" placeholder="número de pessoas"  class="in-anu">
+            <input type="text" placeholder="número de pessoas"  class="in-anu" name="numero_de_pessoas">
             <br>
-            <input type="text" placeholder="bloco"  class="in-anu">
+            <input type="text" placeholder="bloco"  class="in-anu" name="bloco">
             <br>
             <input type="text" placeholder="apartarmento"  class="in-anu" name="apar">
             <br>

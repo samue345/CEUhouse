@@ -1,9 +1,9 @@
 <?php
-class imoveis
+class Imoveis
 {
     private $matricula;
     private  $id_matricula;
-    private  $apartamento;
+    private  $apto;
     private $nome_anfitriao;
     private $bloco;
     private $numero_de_pessoas;
@@ -13,7 +13,7 @@ class imoveis
         return $this->$atributo;
     }
 
-    public function  __set($atributo, $valor)
+    public function __set($atributo, $valor)
     {
         $this->$atributo=$valor;
     }
