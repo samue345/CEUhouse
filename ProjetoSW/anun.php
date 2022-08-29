@@ -1,3 +1,12 @@
+<?php 
+session_start();
+      if(isset($_GET['criou']) && $_GET['criou']==1)
+      {
+         $_SESSION['criada']=1;
+     
+      }
+      
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +24,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light  navegacao-1">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="index.php">
             <img src="images/logo.png" class="logo">
           </a>
     
@@ -59,12 +68,11 @@
     
       </header> 
       <? if(isset($_GET['criou']) && $_GET['criou']==1) {?>
-        
       <section class="sucesso">
         <h5 class="suc">Republica criada!</h5>
       </section>
       <?} ?>
-
+   
       <section>
         <form class="formulario_anuncio" action="imoveis_controller.php" method="post">
             <input type="text" placeholder="nome" class="in-anu" name="nome_anfitriao">

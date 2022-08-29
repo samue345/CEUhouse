@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  echo $_SESSION['criada'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +22,7 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light  navegacao-1">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index.php">
         <img src="images/logo.png" class="logo">
       </a>
 
