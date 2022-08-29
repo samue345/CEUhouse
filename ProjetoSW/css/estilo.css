@@ -177,28 +177,64 @@ a:hover {
 
 /*pagina anuncio*/
 
-.formulario_anuncio{
-  margin: 10px;
+#logo-site
+{
+  width: 150px;
+}
+#div-img
+{
+  margin-left: 39%;
+  margin-top: 20px;
+  background: rgba(130, 222, 11, 0.7);
+  width: 150px;
+  border-radius: 40px;
+  margin-bottom: 10px;
+}
+.anuncio
+{
+  width: 500px;
+  height: 500px;
+  background: white;;
+  margin-left: 20%;
+  margin-top: 2%;
+  border-radius: 8px;
+  
+
 }
 .in-anu{
-  margin: 10px;
+  margin-left: 30%;
+  margin-bottom: 5px;
+  margin-top: 20px;
   padding: 3px;
-  width: 600px;
+  width: 400px;
+
 }
 .animais{
-  margin-left: 8px;
+  margin-left: 150px;
+  width: 15px;
+  height: 15px;
+}
+.animais2
+{
+  margin-left: 20px;
   width: 15px;
   height: 15px;
 }
 .animal{
 font-size: 20px;
-margin-left: 8px;
+margin-left: 150px;
+
 
 }
 .escolha{
   position: relative;
   bottom: 3px;
-  left: 8px;
+  left: 150px;
+}
+.escolha2{
+  position: relative;
+  bottom: 3px;
+  left: 20px;
 }
 .imagens-g{
 
@@ -211,8 +247,32 @@ margin-left: 8px;
   align-items: center;
   background:  rgba(120, 120, 120, 0.2);
 }
+.envia_f
+{
+  border-radius: 5px;
+  background: #82DE0B;
+  border: 1px solid white;
+  padding: 10px;
+  margin-left: 148px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  width: 392px;
+
+
+}
 .texto{
-  margin: 15px;
+  margin-left: 150px;
+}
+.rie
+{
+  margin-left: 150px;
+}
+.h4_anu
+{
+  margin-left: 34%;
+  color: #343B30;
+  letter-spacing: 5px;
+
 }
 
 /*pagina de cadastramento*/
@@ -292,16 +352,16 @@ margin-left: 8px;
 {
   border: 1px solid #dcdcdc;
   background: white;
-  width: 300px;
+  width: 320px;
   height: 300px;
   border-radius: 10px;
   padding: 10px;
-  margin: 10px;
+  margin: 2px;
 
 }
 .info
 {
-  padding-top: 95px;
+  padding-top: 150px;
 
 
 }

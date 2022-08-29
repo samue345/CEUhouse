@@ -74,36 +74,36 @@ session_start();
       <?} ?>
    
       <section>
+        <div id="div-img">
+        <img src="images/logo.png" alt="logo da empresa" id="logo-site">
+        </div>
+        <h4 class="h4_anu">Crie a sua Republica!</h4>
         <form class="formulario_anuncio" action="imoveis_controller.php?acao=inserir" method="post">
-            <input type="text" placeholder="nome" class="in-anu" name="nome_anfitriao">
+          <div class="anuncio">
+            <input type="text" placeholder="nome e sobrenome: " class="in-anu" name="nome_anfitriao">
             <br>
-            <input type="text" placeholder="sobrenome" class="in-anu" name="sobre">
+            <input type="text" placeholder="Número da matricula:" class="in-anu" name="matricula">
             <br>
-            <input type="text" placeholder="Número da matricula" class="in-anu" name="matricula">
+            <input type="text" placeholder="número de pessoas:"  class="in-anu" name="numero_de_pessoas">
             <br>
-            <input type="text" placeholder="número de pessoas"  class="in-anu" name="numero_de_pessoas">
+            <input type="text" placeholder="bloco:"  class="in-anu" name="bloco">
             <br>
-            <input type="text" placeholder="bloco"  class="in-anu" name="bloco">
-            <br>
-            <input type="text" placeholder="apartarmento"  class="in-anu" name="apar">
+            <input type="text" placeholder="apartarmento:"  class="in-anu" name="apar">
             <br>
             <p class="animal">animais:</p>
               <span class="escolha">sim</span>
               <input type="radio" name="animais" class="animais">
-              <span class="escolha">não</span>
-              <input type="radio" name="animais" class="animais">
+              <span class="escolha2">não</span>
+              <input type="radio" name="animais" class="animais2">
             <br>
-            <span class="animal">regras:</span> 
-            <br>
-            <textarea name="sobre_republica" id="" cols="100" rows="10" class="texto">
+            <label for="re" class="rie">Regras:</label>
+
+            <textarea id="re" name="regras" rows=4 cols="50" class="texto">
 
             </textarea>
-            <br>
-            
-            <section class="imagens-g">
-              <input type="file">
-            </section>
-            <button type="submit">Enviar</button>
+           
+            <button type="submit" class="envia_f">Enviar</button>
+          </div>
         </form>
       </section>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

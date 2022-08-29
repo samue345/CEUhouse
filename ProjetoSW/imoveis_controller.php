@@ -32,17 +32,3 @@ else if($acao=='recuperar')
     $tarefas=$imoveisService->recuperar();
 
 }
-
-/*echo '<br/>';
-echo $tarefa->apartamento;
-echo '<br/>';
-echo $tarefa->numero_de_pessoas;
-echo '<br/>';
-echo $tarefa->matricula;
-echo '<br/>';
-echo $tarefa->id_matricula;
-echo '<br/>';
-echo $tarefa->nome_anfitriao;
-echo '<br/>';
-*/
-
