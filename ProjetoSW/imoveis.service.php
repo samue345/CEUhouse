@@ -13,10 +13,8 @@ class imoveisService
     {   
         $query="insert into info_m(apartamento, nome_anfitriao, matricula, bloco, numero_de_pessoas) values(:re, :nome_a, :mat, :blo, :nupe)";
         $smt=$this->conexao->prepare($query);
-       $nomes=$this->imoveis->__get('nome_anfitriao');
-        $aparta=$this->imoveis->__get('apto');
-        $smt->bindValue(':nome_a', $nomes);
-        $smt->bindValue(':re', $aparta);
+        $smt->bindValue(':nome_a', $this->imoveis->__get('nome_anfitriao'));
+        $smt->bindValue(':re', $this->imoveis->__get('apto'));
         $smt->bindValue(':mat', $this->imoveis->__get('matricula'));
         $smt->bindValue(':blo', $this->imoveis->__get('bloco'));
         $smt->bindValue(':nupe', $this->imoveis->__get('numero_de_pessoas'));
@@ -28,6 +26,9 @@ class imoveisService
     } 
     public function recuperar()
     {
+      $query='select * from info_m';
+      $smt= $this->conexao->query($query);
+      return $smt->fetchall(PDO::FETCH_OBJ);
 
     }
     public function atualizar()
