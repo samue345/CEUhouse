@@ -17,6 +17,7 @@ if ($acao == 'inserir')
     $imoveis->__set("matricula", $_POST['matricula']);
     $imoveis->__set("bloco", $_POST['bloco']);
     $imoveis->__set("numero_de_pessoas", $_POST['numero_de_pessoas']);
+    
 
 
     $conexao = new Conexao();

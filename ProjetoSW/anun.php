@@ -78,7 +78,7 @@ session_start();
         <img src="images/logo.png" alt="logo da empresa" id="logo-site">
         </div>
         <h4 class="h4_anu">Crie a sua Republica!</h4>
-        <form class="formulario_anuncio" action="imoveis_controller.php?acao=inserir" method="post">
+        <form class="formulario_anuncio" action="imoveis_controller.php?acao=inserir" method="post" enctype="multipart/form-data">
           <div class="anuncio">
             <input type="text" placeholder="nome e sobrenome: " class="in-anu" name="nome_anfitriao">
             <br>
@@ -86,7 +86,7 @@ session_start();
             <br>
             <input type="text" placeholder="número de pessoas:"  class="in-anu" name="numero_de_pessoas">
             <br>
-            <input type="text" placeholder="bloco:"  class="in-anu" name="bloco">
+            <input type="text" placeholder="bloco:" class="in-anu" name="bloco">
             <br>
             <input type="text" placeholder="apartarmento:"  class="in-anu" name="apar">
             <br>
@@ -101,6 +101,8 @@ session_start();
             <textarea id="re" name="regras" rows=4 cols="50" class="texto">
 
             </textarea>
+            <label for="foto" class="fide">Fotos do quarto: </label>
+            <input type="file" class="fide" id="foto" name="fotos">
            
             <button type="submit" class="envia_f">Enviar</button>
           </div>
