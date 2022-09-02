@@ -1,13 +1,17 @@
 <?php
 session_start();
 
+
 require "conexao.php";
 require "imoveis.service.php";
 require "imoveis.model.php";
+
+
 if(isset($_GET['acao']))
 {
     $acao= $_GET['acao'];
 }
+
 
 if ($acao == 'inserir') 
 {
@@ -17,15 +21,16 @@ if ($acao == 'inserir')
     $imoveis->__set("matricula", $_POST['matricula']);
     $imoveis->__set("bloco", $_POST['bloco']);
     $imoveis->__set("numero_de_pessoas", $_POST['numero_de_pessoas']);
-    
-
-
     $conexao = new Conexao();
     $imoveisService = new imoveisService($conexao, $imoveis);
+    
     $imoveisService->criar();
-    header("location: anun.php?criou=1");
+    //header("location: anun.php?criou=1");
+    header("location: foto.php");
+    
 }
-else if($acao=='recuperar')
+
+if($acao=='recuperar')
 {
     $imoveis= new Imoveis();
     $conexao = new Conexao();

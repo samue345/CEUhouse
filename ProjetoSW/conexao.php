@@ -11,14 +11,18 @@
     {
         try
         {
-          $cone = new PDO("mysql:host=$this->host;dbname=$this->dbname", "$this->usuario", "$this->senha");
-          return $cone;
-      
+
+              $this->cone = new PDO("mysql:host=$this->host;dbname=$this->dbname", "$this->usuario", "$this->senha");
+
+              return $this->cone;
+
         }
         catch(PDOException $e)
         {
           echo "erro". $e->getCode(). "message". $e->getMessage(); 
-        }  
+        } 
+        
+
     }
 
 }

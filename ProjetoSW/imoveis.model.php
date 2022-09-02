@@ -8,6 +8,7 @@ class Imoveis
     private $bloco;
     private $numero_de_pessoas;
     private $fotos;
+    private $nomeFoto;
     public function __get($atributo)
     {
         return $this->$atributo;

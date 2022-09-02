@@ -72,7 +72,7 @@ session_start();
         <h5 class="suc">Republica criada!</h5>
       </section>
       <?} ?>
-   
+  
       <section>
         <div id="div-img">
         <img src="images/logo.png" alt="logo da empresa" id="logo-site">
@@ -102,7 +102,6 @@ session_start();
 
             </textarea>
             <label for="foto" class="fide">Fotos do quarto: </label>
-            <input type="file" class="fide" id="foto" name="fotos">
            
             <button type="submit" class="envia_f">Enviar</button>
           </div>
