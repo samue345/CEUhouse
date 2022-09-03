@@ -36,5 +36,7 @@ if($acao=='recuperar')
     $conexao = new Conexao();
     $imoveisService = new imoveisService($conexao, $imoveis);
     $tarefas=$imoveisService->recuperar();
+    $tarefas2=$imoveisService->recuperarfoto();
+  
 
 }

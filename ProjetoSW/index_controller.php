@@ -38,23 +38,4 @@ require "imoveis.model.php";
     }
 
 
-   // $conexao = new Conexao();
-    //$imoveisService = new imoveisService($conexao, $imoveis);
-    //$imoveisService->criarfoto();
-
-/*
-    if(id_imagem < 4)
-    {
-        header("location: foto.php");
-
-
-    }
-    else
-    {
-        header("location: foto.php?criou=1");
-
-
-    }
-
-*/
-
+ 

@@ -1,5 +1,4 @@
 <?php
-//session_start();
 class imoveisService
 {
    private  $conexao;
@@ -41,7 +40,7 @@ class imoveisService
 
         
 
-       $smt->bindValue(':id', 1);
+       $smt->bindValue(':id', $_SESSION['id']);
         $smt->bindValue(':p', $this->imoveis->__get('fotos'));
         $smt->bindValue(':f', $this->imoveis->__get('nomeFoto'));
 
@@ -49,11 +48,19 @@ class imoveisService
 
     } 
     public function recuperar()
-    {
+    {       
+    
       $query='select * from info_m';
       $smt= $this->conexao->query($query);
       return $smt->fetchall(PDO::FETCH_OBJ);
 
+
+    }
+    public function recuperarfoto()
+    {
+        $query='select * from info_m inner join images on(info_m.id_matricula = id_imagem)';
+        $smt= $this->conexao->query($query);
+        return $smt->fetchall(PDO::FETCH_OBJ);
     }
     public function atualizar()
     {

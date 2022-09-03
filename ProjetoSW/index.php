@@ -2,6 +2,8 @@
 $acao = 'recuperar';
 require_once "imoveis_controller.php";
 
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,13 +87,56 @@ require_once "imoveis_controller.php";
     </ul>
 
   </nav>
-<div class="grid_d">
-  <? foreach ($tarefas as $key => $tarefa) { ?>
+  <div class="grid_d">
+    <? foreach ($tarefas as $key => $tarefa) { ?>
+      <?php $id = $tarefa->id_matricula;?>
+    
       <div class="index_card">
         <section>
-          iamgem
+
+          <div class="container-fluid">
+            <div class="row justify-content-center mb-2">
+              <div class="col-lg-10">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+
+              
+                
+
+                  <div class="carousel-inner">
+                    <?
+                    $i = 0;
+                    foreach ($tarefas2 as $key => $row) {
+                      $actives = '';
+                      if ($i == 0) {
+                        $actives = 'active';
+                      }
+                    ?>
+                      <?if($id == $row->id_imagem) {?>
+
+                      <div class="carousel-item <?= $actives; ?>">
+                      <img src="<?= $row->imagens ?>" width="200" height="200">
+                      </div>
+                      <?}?>
+                    <? $i++;}?>
+                  </div>
+                  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </a>
+                  <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </a>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+                    
         </section>
+
         <section class=" info">
+        
           nome do anfitrião: <?= $tarefa->nome_anfitriao ?>
           <?= '<br/>' ?>
           bloco: <?= $tarefa->bloco ?>
@@ -100,11 +145,12 @@ require_once "imoveis_controller.php";
           <?= '<br/>' ?>
           numero de pessoas: <?= $tarefa->numero_de_pessoas ?>
           <?= '<br/>' ?>
+        
         </section>
 
       </div>
 
-  <? } ?>
+    <? } ?>
   </div>
 
 
