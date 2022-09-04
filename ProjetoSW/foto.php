@@ -61,14 +61,16 @@
 
 </header> 
     
-    <h5>Envie mais fotos do quarto ou apartamento</h5>
-    <div>
-    <form action="index_controller.php?acao=1"  enctype="multipart/form-data" method="post"  class="formulario_anuncio">
+    <h4 class="h4_foto">Envie mais fotos do quarto ou apartamento</h4>
+    <div class="div-foto">
+    <form action="index_controller.php?acao=1"  enctype="multipart/form-data" method="post"  class="formulario_foto">
+      <section class="fotoin">
+      <input type="file" name="fotos" class="filefoto">
+      <section>
 
-      <input type="file" name="fotos">
-
-      <input type="hidden" name="info" value="Test"  class="in-anu">
-      <button type="submit">enviar</button>
+      <input type="hidden" name="info" value="Test">
+      <br>
+      <button type="submit" class="fotosub">enviar</button>
       </div>
 
     </form>
