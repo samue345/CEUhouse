@@ -7,6 +7,7 @@ require "imoveis.model.php";
 
 
     $imoveis = new Imoveis();
+   
     if(isset($_FILES['fotos']))
     {
          $arquivo=$_FILES['fotos'];

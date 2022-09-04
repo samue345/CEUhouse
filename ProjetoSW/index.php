@@ -3,7 +3,6 @@ $acao = 'recuperar';
 require_once "imoveis_controller.php";
 
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -89,69 +88,34 @@ require_once "imoveis_controller.php";
   </nav>
   <div class="grid_d">
     <? foreach ($tarefas as $key => $tarefa) { ?>
-      <?php $id = $tarefa->id_matricula;?>
-    
+      <?php $id = $tarefa->id_matricula; ?>
+
       <div class="index_card">
-        <section>
-
-          <div class="container-fluid">
-            <div class="row justify-content-center mb-2">
-              <div class="col-lg-10">
-                <div id="demo" class="carousel slide" data-ride="carousel">
-
-              
-                
-
-                  <div class="carousel-inner">
-                    <?
-                    $i = 0;
-                    foreach ($tarefas2 as $key => $row) {
-                      $actives = '';
-                      if ($i == 0) {
-                        $actives = 'active';
-                      }
-                    ?>
-                      <?if($id == $row->id_imagem) {?>
-
-                      <div class="carousel-item <?= $actives; ?>">
-                      <img src="<?= $row->imagens ?>" width="200" height="200">
-                      </div>
-                      <?}?>
-                    <? $i++;}?>
-                  </div>
-                  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                  </a>
-                  <a class="carousel-control-next" href="#demo" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                  </a>
-
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-                    
+        <section class="seim">
+          <img src="<?= $tarefa->fotos?>" alt="" width="276" height="200" class="imgf">
+          
         </section>
 
         <section class=" info">
+
+          <ul>
+          <li class="lista-card">nome do anfitrião: <?= $tarefa->nome_anfitriao ?></li>
+          <li class="lista-card">bloco: <?= $tarefa->bloco ?></li>
+          <li class="lista-card">apartamento: <?= $tarefa->apartamento ?></li>
+         <li class="lista-card">numero de pessoas: <?= $tarefa->numero_de_pessoas ?></li>
+          </ul>
         
-          nome do anfitrião: <?= $tarefa->nome_anfitriao ?>
-          <?= '<br/>' ?>
-          bloco: <?= $tarefa->bloco ?>
-          <?= '<br/>' ?>
-          apartamento: <?= $tarefa->apartamento ?>
-          <?= '<br/>' ?>
-          numero de pessoas: <?= $tarefa->numero_de_pessoas ?>
-          <?= '<br/>' ?>
-        
+
         </section>
+
 
       </div>
 
     <? } ?>
   </div>
+  
+
+
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

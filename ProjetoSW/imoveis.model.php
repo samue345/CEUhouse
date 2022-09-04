@@ -9,6 +9,7 @@ class Imoveis
     private $numero_de_pessoas;
     private $fotos;
     private $nomeFoto;
+    private $fotoA;
     public function __get($atributo)
     {
         return $this->$atributo;

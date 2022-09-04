@@ -1,7 +1,7 @@
 <?php
   session_start();
- echo  $_SESSION['id'];
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,10 +60,16 @@
 </nav>
 
 </header> 
-    <form action="index_controller.php?acao=1"  enctype="multipart/form-data" method="post">
+    
+    <h5>Envie mais fotos do quarto ou apartamento</h5>
+    <div>
+    <form action="index_controller.php?acao=1"  enctype="multipart/form-data" method="post"  class="formulario_anuncio">
+
       <input type="file" name="fotos">
-      <input type="hidden" name="info" value="Test">
+
+      <input type="hidden" name="info" value="Test"  class="in-anu">
       <button type="submit">enviar</button>
+      </div>
 
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

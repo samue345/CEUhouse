@@ -75,20 +75,20 @@ session_start();
   
       <section>
         <div id="div-img">
-        <img src="images/logo.png" alt="logo da empresa" id="logo-site">
+        <img src="images/logo.png" alt="logo da empresa" id="logo-site" >
         </div>
         <h4 class="h4_anu">Crie a sua Republica!</h4>
         <form class="formulario_anuncio" action="imoveis_controller.php?acao=inserir" method="post" enctype="multipart/form-data">
           <div class="anuncio">
-            <input type="text" placeholder="nome e sobrenome: " class="in-anu" name="nome_anfitriao">
+            <input type="text" placeholder="nome e sobrenome: " class="in-anu" name="nome_anfitriao" required>
             <br>
-            <input type="text" placeholder="Número da matricula:" class="in-anu" name="matricula">
+            <input type="text" placeholder="Número da matricula:" class="in-anu" name="matricula" required>
             <br>
-            <input type="text" placeholder="número de pessoas:"  class="in-anu" name="numero_de_pessoas">
+            <input type="text" placeholder="número de pessoas:"  class="in-anu" name="numero_de_pessoas" required>
             <br>
-            <input type="text" placeholder="bloco:" class="in-anu" name="bloco">
+            <input type="text" placeholder="bloco:" class="in-anu" name="bloco" required>
             <br>
-            <input type="text" placeholder="apartarmento:"  class="in-anu" name="apar">
+            <input type="text" placeholder="apartarmento:"  class="in-anu" name="apar" required>
             <br>
             <p class="animal">animais:</p>
               <span class="escolha">sim</span>
@@ -101,9 +101,10 @@ session_start();
             <textarea id="re" name="regras" rows=4 cols="50" class="texto">
 
             </textarea>
-            <label for="foto" class="fide">Fotos do quarto: </label>
+            <label for="foto" class="fide">Fotos de apresentação: </label>
+            <input type="file" name="fotoAP" class="fide" required>
            
-            <button type="submit" class="envia_f">Enviar</button>
+            <button type="submit" class="envia_f">proxímo</button>
           </div>
         </form>
       </section>
