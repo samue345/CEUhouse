@@ -317,10 +317,21 @@ margin-left: 150px;
   margin-left: 10%;
 }
 .fotosub{
-  top: 71.5%;
+  top: 71.3%;
   position: absolute;
   right: 33.2%;
   width: 200px;
+  background: #82DE0B;
+  padding: 5px;
+  border: none;
+
+
+}
+.finaliza{
+  top: 94%;
+  position: absolute;
+  left: 70%;
+  width: 400px;
   background: #82DE0B;
   padding: 5px;
   border: none;

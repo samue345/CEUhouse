@@ -60,6 +60,11 @@
 </nav>
 
 </header> 
+<? if(isset($_GET['criou']) && $_GET['criou']==1) {?>
+      <section class="sucesso">
+        <h5 class="suc">Republica criada!</h5>
+      </section>
+      <?} ?>
     
     <h4 class="h4_foto">Envie mais fotos do quarto ou apartamento</h4>
     <div class="div-foto">
@@ -73,6 +78,9 @@
       <button type="submit" class="fotosub">enviar</button>
       </div>
 
+    </form>
+    <form action="foto.php?criou=1"  method="post">
+      <button type="submit" class="finaliza">Finalizar</button>
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
