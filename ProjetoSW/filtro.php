@@ -14,14 +14,14 @@
        <p>  Republica:</p>
       <ul class="flex">
         <li class="listap">
-           Masculina<input type="checkbox" class="inputp" name="sexo[]" value="masculina">
+           Masculina<input type="checkbox" class="inputp" name="sexo[masculino]" value="masculina">
         </li>
         <li class="listap">
-            Feminina<input type="checkbox" class="inputp" name="sexo[]" value="feminina">
+            Feminina<input type="checkbox" class="inputp" name="sexo[feminino]" value="feminina">
 
         </li>
         <li class="listap">
-            Mista<input type="checkbox" class="inputp" name="sexo[]"  value="mista">
+            Mista<input type="checkbox" class="inputp" name="sexo[misto]"  value="mista">
         </li>
       </ul>
 

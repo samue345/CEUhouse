@@ -38,9 +38,6 @@ class imoveisService
         $smt=$this->conexao->prepare($query);
         $query2='select id_matricula from info_m';
         $smtt=$this->conexao->prepare($query2);
-
-        
-
        $smt->bindValue(':id', $_SESSION['id']);
         $smt->bindValue(':p', $this->imoveis->__get('fotos'));
         $smt->bindValue(':f', $this->imoveis->__get('nomeFoto'));
@@ -50,11 +47,67 @@ class imoveisService
     } 
     public function recuperar()
     {       
+     
+      if($_SESSION['filtro']==1)
+      {  
+            if($_SESSION['m'] !='' && $_SESSION['fi'] == '' && $_SESSION['mi'] == '')
+            {
+              $query="SELECT * FROM info_m WHERE sexo = 'masculina'";
+              $smt= $this->conexao->query($query);
+              return $smt->fetchall(PDO::FETCH_OBJ);
+            }
+            if($_SESSION['m'] =='' && $_SESSION['fi'] != '' && $_SESSION['mi'] == '')
+            {
+              $query="SELECT * FROM info_m WHERE sexo = 'feminina'";
+              $smt= $this->conexao->query($query);
+              return $smt->fetchall(PDO::FETCH_OBJ);
+            }
+            if($_SESSION['mi'] != '' && $_SESSION['m'] =='' && $_SESSION['fi'] == '')
+            {
+              $query="SELECT * FROM info_m WHERE sexo = 'mista'";
+              $smt= $this->conexao->query($query);
+              return $smt->fetchall(PDO::FETCH_OBJ);
+            }
+            if($_SESSION['m'] != ''  && $_SESSION['fi'] != '' && $_SESSION['mi'] == '')
+            {
+              $query="SELECT * FROM info_m WHERE sexo = 'feminina' OR sexo='masculina'";
+              $smt= $this->conexao->query($query);
+              return $smt->fetchall(PDO::FETCH_OBJ);
+            }
+            if($_SESSION['m'] != ''  && $_SESSION['fi'] == '' && $_SESSION['mi'] != '')
+            {
+              $query="SELECT * FROM info_m WHERE sexo = 'mista' OR sexo='masculina'";
+              $smt= $this->conexao->query($query);
+              return $smt->fetchall(PDO::FETCH_OBJ);
+            }
+            if($_SESSION['m'] == ''  && $_SESSION['fi'] != '' && $_SESSION['mi'] != '')
+            {
+              $query="SELECT * FROM info_m WHERE sexo = 'mista' OR sexo='feminina'";
+              $smt= $this->conexao->query($query);
+              return $smt->fetchall(PDO::FETCH_OBJ);
+            }
+            if($_SESSION['m'] != ''  && $_SESSION['fi'] != '' && $_SESSION['mi'] != '')
+            {
+              $query="SELECT * FROM info_m WHERE sexo = 'mista' OR sexo='feminina' OR sexo='masculina'";
+              $smt= $this->conexao->query($query);
+              return $smt->fetchall(PDO::FETCH_OBJ);
+            }
+        
+        
+        
+        
+        
+        
+      }else
+      {
     
-      $query='select * from info_m';
-      $smt= $this->conexao->query($query);
-      return $smt->fetchall(PDO::FETCH_OBJ);
 
+        $query='select * from info_m';
+        $smt= $this->conexao->query($query);
+        return $smt->fetchall(PDO::FETCH_OBJ);
+
+      }
+    
 
     }
     public function recuperarfoto()

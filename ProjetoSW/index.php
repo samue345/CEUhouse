@@ -1,8 +1,9 @@
 <?php
 $acao = 'recuperar';
 require_once "imoveis_controller.php";
-
-
+echo $_SESSION['m'];
+echo $_SESSION['mi'];
+echo $_SESSION['fi'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -113,6 +114,7 @@ require_once "imoveis_controller.php";
 
     <? } ?>
   </div>
+
   
 
 
