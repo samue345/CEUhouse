@@ -12,7 +12,7 @@ class imoveisService
 
     public function criar()
     {   
-        $query="insert into info_m(apartamento, nome_anfitriao, matricula, bloco, numero_de_pessoas, fotos) values(:re, :nome_a, :mat, :blo, :nupe, :f)";
+        $query="insert into info_m(apartamento, nome_anfitriao, matricula, bloco, numero_de_pessoas, fotos, sexo) values(:re, :nome_a, :mat, :blo, :nupe, :f, :s)";
       
 
          $smt=$this->conexao->prepare($query);
@@ -23,6 +23,8 @@ class imoveisService
         $smt->bindValue(':blo', $this->imoveis->__get('bloco'));
         $smt->bindValue(':nupe', $this->imoveis->__get('numero_de_pessoas'));
         $smt->bindValue(':f', $this->imoveis->__get('fotoA'));
+        $smt->bindValue(':s', $this->imoveis->__get('sexo'));
+
         $smt->execute();
         $id = $this->conexao->lastInsertId();
         $_SESSION['id']=$id;

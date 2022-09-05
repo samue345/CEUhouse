@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="filtros">
-    <form action="imoveis_controller.php?acao=filtro" method="post">
+    <form action="imoveis_controller.php?filtro=1&acao=recuperar" method="post">
        <p>  Republica:</p>
       <ul class="flex">
         <li class="listap">
@@ -30,14 +30,14 @@
       <p>Numero de pessoas: </p>
       <ul class="flex">
         <li class="listap">
-           2 pessoas<input type="checkbox" class="inputp">
+           2 pessoas<input type="checkbox" class="inputp" name="pessoas[]" value="2">
         </li>
         <li class="listap">
-            6 pessoas<input type="checkbox" class="inputp">
+            6 pessoas<input type="checkbox" class="inputp"  name="pessoas[]" value="6">
 
         </li>
         <li class="listap">
-            8 pessoas<input type="checkbox" class="inputp">
+            8 pessoas<input type="checkbox" class="inputp"  name="pessoas[]" value="8">
         </li>
       </ul>
       <hr>

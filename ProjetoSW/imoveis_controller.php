@@ -11,7 +11,11 @@ if(isset($_GET['acao']))
 {
     $acao= $_GET['acao'];
 }
+if(isset($_GET['filtro']) && $_GET['filtro']==1)
+{
+    $filtro=$_GET['filtro'];
 
+}
 
 if ($acao == 'inserir') 
 {
@@ -34,6 +38,8 @@ if ($acao == 'inserir')
     $imoveis->__set("matricula", $_POST['matricula']);
     $imoveis->__set("bloco", $_POST['bloco']);
     $imoveis->__set("numero_de_pessoas", $_POST['numero_de_pessoas']);
+    $imoveis->__set("sexo", $_POST['sexo']);
+
     $conexao = new Conexao();
     $imoveisService = new imoveisService($conexao, $imoveis);
     $imoveisService->criar();
@@ -46,18 +52,10 @@ if ($acao == 'inserir')
 
 else if($acao=='recuperar')
 {
-    $imoveis= new Imoveis();
-    $conexao = new Conexao();
-    $imoveisService = new imoveisService($conexao, $imoveis);
-    $tarefas=$imoveisService->recuperar();
-    $tarefas2=$imoveisService->recuperarfoto();
-  
+        $imoveisService = new imoveisService($conexao, $imoveis);
+        $tarefas=$imoveisService->recuperar();
+        $tarefas2=$imoveisService->recuperarfoto();
 
-}
-else if($acao=='filtro')
-{
-    echo "<pre>";
-    print_r($_POST);
-    echo "<pre>";
+
 
 }

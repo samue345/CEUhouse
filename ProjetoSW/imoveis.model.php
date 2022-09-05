@@ -10,6 +10,15 @@ class Imoveis
     private $fotos;
     private $nomeFoto;
     private $fotoA;
+    private $sexo;
+    private $mas;
+    private $fem;
+    private $mista;
+    private $p2;
+    private $p3;
+    private $p4;
+
+    
     public function __get($atributo)
     {
         return $this->$atributo;
