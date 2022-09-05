@@ -52,6 +52,8 @@ if ($acao == 'inserir')
 
 else if($acao=='recuperar')
 {
+        $conexao = new Conexao();
+         $imoveis = new Imoveis();
         $imoveisService = new imoveisService($conexao, $imoveis);
         $tarefas=$imoveisService->recuperar();
         $tarefas2=$imoveisService->recuperarfoto();
@@ -59,3 +61,22 @@ else if($acao=='recuperar')
 
 
 }
+else if($acao=='inserir2')
+{
+        $conexao = new Conexao();
+         $imoveis = new Imoveis();
+         if(isset($_GET['filtro']) && $_GET['filtro']==1)
+         {
+            $_SESSION['filtro']=$_GET['filtro'];
+         }
+         else
+         {
+            $_SESSION['filtro']=0;
+         }
+        $imoveisService = new imoveisService($conexao, $imoveis);
+
+
+
+
+}
+

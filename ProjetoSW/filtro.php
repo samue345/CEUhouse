@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="filtros">
-    <form action="imoveis_controller.php?filtro=1&acao=recuperar" method="post">
+    <form action="imoveis_controller.php?filtro=1&acao=inserir2" method="post">
        <p>  Republica:</p>
       <ul class="flex">
         <li class="listap">
