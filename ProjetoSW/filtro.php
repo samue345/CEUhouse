@@ -10,18 +10,18 @@
 </head>
 <body>
     <div id="filtros">
-    <form action="">
+    <form action="imoveis_controller.php?acao=filtro" method="post">
        <p>  Republica:</p>
       <ul class="flex">
         <li class="listap">
-           Masculina<input type="checkbox" class="inputp">
+           Masculina<input type="checkbox" class="inputp" name="sexo[]" value="masculina">
         </li>
         <li class="listap">
-            Feminina<input type="checkbox" class="inputp">
+            Feminina<input type="checkbox" class="inputp" name="sexo[]" value="feminina">
 
         </li>
         <li class="listap">
-            Mista<input type="checkbox" class="inputp">
+            Mista<input type="checkbox" class="inputp" name="sexo[]"  value="mista">
         </li>
       </ul>
 

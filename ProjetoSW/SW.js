@@ -12,7 +12,7 @@ function apaga(){
 }
 function filtro(){
 
-    window.open("filtro.html", "self", "width=750, height=800");
+    window.open("filtro.php", "self", "width=750, height=800");
 
 }
 

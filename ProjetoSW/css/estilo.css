@@ -224,7 +224,7 @@ a:hover {
   width: 15px;
   height: 15px;
 }
-.animal{
+.animal, .sexo,  .ulsexo{
 font-size: 20px;
 margin-left: 150px;
 
@@ -239,6 +239,18 @@ margin-left: 150px;
   position: relative;
   bottom: 3px;
   left: 20px;
+}
+.masc
+{
+
+}
+.femi
+{
+
+}
+.mista
+{
+
 }
 .imagens-g{
 

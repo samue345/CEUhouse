@@ -44,7 +44,7 @@ if ($acao == 'inserir')
     
 }
 
-if($acao=='recuperar')
+else if($acao=='recuperar')
 {
     $imoveis= new Imoveis();
     $conexao = new Conexao();
@@ -52,5 +52,12 @@ if($acao=='recuperar')
     $tarefas=$imoveisService->recuperar();
     $tarefas2=$imoveisService->recuperarfoto();
   
+
+}
+else if($acao=='filtro')
+{
+    echo "<pre>";
+    print_r($_POST);
+    echo "<pre>";
 
 }
