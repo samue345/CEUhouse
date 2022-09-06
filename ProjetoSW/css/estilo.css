@@ -454,6 +454,12 @@ margin-left: 150px;
 
 }
 
+/*informações da republica*/
+.cont
+{
+  width: 700px;
+  height: 400px;
+}
 .grid_d{
   display: grid;
   grid-template-columns: 300px 300px 300px 300px;
