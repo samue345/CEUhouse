@@ -87,7 +87,7 @@ $tarefas = $imoveisService->recuperar2($id2);
         </ul>
 
     </nav>
-    <h5>Republica:</h5>
+    <h4 >Republica:</h4>
     <div class="cont bg-warning">
         <div class="row justify-content-center mb-2">
         <div class="col-lg-10">
@@ -160,9 +160,9 @@ $tarefas = $imoveisService->recuperar2($id2);
        <li class="li-ro"><a href="#" class="link-ro">Manual do usuário <i class="fa-solid fa-arrow-right"></i></a></li>
         </ul>
         <ul class="flex" id="ul-ro2">
-       <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-facebook-f" class ="icone"></i></a></li>
-       <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-instagram" class ="icone"></i></a></li>
-       <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-linkedin-in" class ="icone"></i></a></li>
+       <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-facebook-f fa-lg" class ="icone"></i></a></li>
+       <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-instagram fa-lg" class ="icone"></i></a></li>
+       <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-linkedin-in fa-lg" class ="icone"></i></a></li>
         </ul>
     </footer>
  

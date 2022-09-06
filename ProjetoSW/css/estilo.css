@@ -511,7 +511,7 @@ margin-left: 150px;
 }
 #ul-r
 {
-  margin-right: 500px;
+  margin-right: 440px;
 }
 #ul-ro2
 {
@@ -526,24 +526,20 @@ margin-left: 150px;
 .li-ro2
 {
   padding-top: 10px;
-  padding: 5px;
+  padding: 10px;
   
 }
 
 
-.link-ro
+.link-ro, .link-ro2
 {
   color: var(--color2);
   cursor: pointer;
 
 }
-.link-ro:hover
+.link-ro:hover, .link-ro2:hover
 {
   color: black;
   background: rgba(120, 120, 120, 0.1);
 
-}
-.icone
-{
-  width: 200px;
 }
