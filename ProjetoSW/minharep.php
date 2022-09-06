@@ -154,15 +154,15 @@ $tarefas = $imoveisService->recuperar2($id2);
     </section>
     <footer id="rodapé" class="flex">
         <ul id="ul-r" class="flex">
-        <li><a href="#">Politica de privacidade</a></li>
-       <li><a href="#">Termos e condições de uso</a></li>
-       <li><a href="#"> Política de Cookies</a></li>
-       <li><a href="#">Manual do usuário</a></li>
+        <li class="li-ro"><a href="#" class="link-ro">Politica de privacidade <i class="fa-solid fa-arrow-right"></i></a></li>
+       <li class="li-ro"><a href="#" class="link-ro">Termos e condições de uso</a></li>
+       <li class="li-ro"><a href="#" class="link-ro"> Política de Cookies</a></li>
+       <li class="li-ro"><a href="#" class="link-ro">Manual do usuário</a></li>
         </ul>
         <ul class="flex">
-       <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-       <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-       <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+       <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-facebook-f"></i></a></li>
+       <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-instagram"></i></a></li>
+       <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-linkedin-in"></i></a></li>
         </ul>
     </footer>
  

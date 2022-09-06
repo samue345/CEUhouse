@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-.root {
+:root {
   --color: #dcdcdc;
   --color2: white;
 }
@@ -506,5 +506,15 @@ margin-left: 150px;
 }
 #ul-r
 {
-  margin-right: 400px;
+  margin-right: 600px;
+}
+.li-ro
+{
+  padding-top: 5px;
+  padding: 10px;
+}
+.link-ro
+{
+  color: var(--color2);
+
 }
