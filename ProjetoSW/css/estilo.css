@@ -469,6 +469,12 @@ margin-left: 150px;
 {
   font-size: 20px;
 }
+.info_re
+{
+  font-size: 15px;
+  margin-left: 20px;
+
+}
 
 @media only screen and (min-width:1000px) {
   .meu {
@@ -488,4 +494,17 @@ margin-left: 150px;
     width: 200px;
   }
 
+}
+/*rodapé*/
+#rodapé
+{
+  background: black;
+  height: 300px;
+  justify-content: space-around;
+
+  
+}
+#ul-r
+{
+  margin-right: 400px;
 }

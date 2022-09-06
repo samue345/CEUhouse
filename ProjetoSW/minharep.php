@@ -142,17 +142,30 @@ $tarefas = $imoveisService->recuperar2($id2);
         foreach($tarefas as $key => $row){?>
             <?if($row->id_matricula != $id){?>
                 <ul>
-                   <li class="info_re"> <span class="info_re-span">nome do anfitrião:</span><?=$row->nome_anfitriao?></li>
-                    <li class="info_re"><span  class="info_re-span">apartamento:</span><?=$row->apartamento?></li>
-                    <li class="info_re"><span  class="info_re-span">bloco:</span><?=$row->bloco?></li>
-                    <li class="info_re"><span class="info_re-span">numero de pessoas da Republica:</span> <?=$row->numero_de_pessoas?></li>
-                    <li class="info_re"><span class="info_re-span">Republica:</span><?=$row->sexo?></li>
+                   <li class="info_re"> <p class="info_re-span">nome do anfitrião:</p><?=$row->nome_anfitriao?></li>
+                    <li class="info_re"><p class="info_re-span">apartamento:</p><?=$row->apartamento?></li>
+                    <li class="info_re"><p class="info_re-span">bloco:</p><?=$row->bloco?></li>
+                    <li class="info_re"><p class="info_re-span">numero de pessoas da Republica:</p> <?=$row->numero_de_pessoas?></li>
+                    <li class="info_re"><p class="info_re-span">Republica:</p><?=$row->sexo?></li>
 
                 </ul>
                 <?} $id=$row->id_matricula; ?>
        <? }?>
     </section>
-
+    <footer id="rodapé" class="flex">
+        <ul id="ul-r" class="flex">
+        <li><a href="#">Politica de privacidade</a></li>
+       <li><a href="#">Termos e condições de uso</a></li>
+       <li><a href="#"> Política de Cookies</a></li>
+       <li><a href="#">Manual do usuário</a></li>
+        </ul>
+        <ul class="flex">
+       <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+       <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+       <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        </ul>
+    </footer>
+ 
 
 
 
