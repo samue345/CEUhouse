@@ -17,11 +17,6 @@ require_once "imoveis_controller.php";
   <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
 
 </head>
-<script>
-  function cardi(id) {
-    alert(id);
-  }
-</script>
 
 <body>
   <header>
@@ -94,7 +89,7 @@ require_once "imoveis_controller.php";
     <? foreach ($tarefas as $key => $tarefa) { ?>
       <?php $id = $tarefa->id_matricula; ?>
 
-      <div class="index_card" id="imovel_<?= $tarefa->id_matricula ?>" onclick="cardi(<?= $tarefa->id_matricula ?>)">
+      <div class="index_card" id="imovel_<?= $tarefa->id_matricula ?>" onclick="location.href='minharep.php?id=<?= $tarefa->id_matricula ?>'">
         <section class="seim">
           <img src="<?= $tarefa->fotos ?>" alt="" width="276" height="200" class="imgf">
 
