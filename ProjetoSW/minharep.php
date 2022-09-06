@@ -142,11 +142,11 @@ $tarefas = $imoveisService->recuperar2($id2);
         foreach($tarefas as $key => $row){?>
             <?if($row->id_matricula != $id){?>
                 <ul>
-                   <li>nome do anfitrião: <?=$row->nome_anfitriao?></li>
-                    <li>apartamento: <?=$row->apartamento?></li>
-                    <li>bloco: <?=$row->bloco?></li>
-                    <li>numero de pessoas da Republica: <?=$row->numero_de_pessoas?></li>
-                    <li>Republica:<?=$row->sexo?></li>
+                   <li class="info_re"> <span class="info_re-span">nome do anfitrião:</span><?=$row->nome_anfitriao?></li>
+                    <li class="info_re"><span  class="info_re-span">apartamento:</span><?=$row->apartamento?></li>
+                    <li class="info_re"><span  class="info_re-span">bloco:</span><?=$row->bloco?></li>
+                    <li class="info_re"><span class="info_re-span">numero de pessoas da Republica:</span> <?=$row->numero_de_pessoas?></li>
+                    <li class="info_re"><span class="info_re-span">Republica:</span><?=$row->sexo?></li>
 
                 </ul>
                 <?} $id=$row->id_matricula; ?>
