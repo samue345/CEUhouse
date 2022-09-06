@@ -116,6 +116,12 @@ class imoveisService
         $smt= $this->conexao->query($query);
         return $smt->fetchall(PDO::FETCH_OBJ);
     }
+    public function recuperar2($id2)
+    {
+      $query="SELECT * FROM info_m INNER JOIN images ON (info_m.id_matricula = id_imagem) WHERE id_matricula = $id2 ";
+              $smt= $this->conexao->query($query);
+              return $smt->fetchall(PDO::FETCH_OBJ);
+    }
     public function atualizar()
     {
 
