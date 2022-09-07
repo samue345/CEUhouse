@@ -1,6 +1,5 @@
 <?php
   session_start();
- echo $_SESSION['sexo'];
 ?>
 
 <!DOCTYPE html>
@@ -80,11 +79,15 @@
       </div>
 
     </form>
+    <?if(isset($_GET['certo']) && $_GET['certo']==0){?>
+      <p style="color: red;">O arquivo enviado não é valido, somente envie arquivos jpeg ou png</p>
+      <?}?>
+    
     <form action="foto.php?criou=1"  method="post">
       <button type="submit" class="finaliza">Finalizar</button>
     </form>
 
-    <footer id="rodapé" class="flex">
+    <footer id="rodapé2" class="flex">
         <ul id="ul-r" class="flex">
             <li class="li-ro"><a href="#" class="link-ro">Politica de privacidade <i class="fa-solid fa-arrow-right"></i></a></li>
             <li class="li-ro"><a href="#" class="link-ro">Termos e condições de uso <i class="fa-solid fa-arrow-right"></i></a></li>

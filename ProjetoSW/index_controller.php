@@ -6,22 +6,24 @@ require "imoveis.service.php";
 require "imoveis.model.php";
 
 
-    $imoveis = new Imoveis();
-   
-    if(isset($_FILES['fotos']))
-    {
-         $arquivo=$_FILES['fotos'];
-         $pasta='images/myfotos/';
-         if($arquivo['error'])
-         die("falha ao enviar arquivo");
+$imoveis = new Imoveis();
 
-         $nomeAr=$arquivo['name'];
-         $novoNome=uniqid();
-         $extensao=strtolower(pathinfo($nomeAr, PATHINFO_EXTENSION));
-         $path= $pasta . $novoNome. "." . $extensao;
-         $deu_certo=move_uploaded_file($arquivo['tmp_name'], $path);
-         if($deu_certo)
-         {
+if (isset($_FILES['fotos'])) {
+
+    $arquivo = $_FILES['fotos'];
+    $pasta = 'images/myfotos/';
+    if ($arquivo['error'])
+        die("falha ao enviar arquivo");
+
+    $nomeAr = $arquivo['name'];
+    $novoNome = uniqid();
+    $extensao = strtolower(pathinfo($nomeAr, PATHINFO_EXTENSION));
+
+    if ($extensao == 'png' || $extensao == 'jpeg') {
+        $path = $pasta . $novoNome . "." . $extensao;
+        $deu_certo = move_uploaded_file($arquivo['tmp_name'], $path);
+
+        if ($deu_certo) {
             echo $path;
             $imoveis->__set("fotos", $path);
             $imoveis->__set("nomeFoto", $nomeAr);
@@ -29,14 +31,12 @@ require "imoveis.model.php";
             $imoveisService = new imoveisService($conexao, $imoveis);
             $imoveisService->criarfoto();
             header("location: foto.php");
-
-         }
-
+        }
     }
     else
     {
-        echo "aruqivo não existe";
+        header("location: foto.php?certo=0");
     }
-
-
- 
+} else {
+    echo "aruqivo não existe";
+}
