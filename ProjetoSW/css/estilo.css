@@ -472,13 +472,33 @@ margin-left: 150px;
 }
 .info_re-span
 {
-  font-size: 20px;
+ font-size: 18px;
+  color: #137000;
+
 }
 .info_re
 {
-  font-size: 15px;
-  margin-left: 20px;
+ 
+padding: 10px;
 
+}
+.img_b
+{
+  width: 990px;
+  height: 400px;
+  position: relative;
+  left: 60px;
+}
+
+#sec-caro
+{
+  background: #343B30;
+  width: 100%;
+}
+#meu
+{
+  width: 900px;
+  margin-top: 20px;
 }
 
 @media only screen and (min-width:1000px) {
@@ -504,7 +524,7 @@ margin-left: 150px;
 #rodapé
 {
   background: #395152;
-  height: 120px;
+  height: 100px;
   justify-content: space-around;
 
   
@@ -543,3 +563,4 @@ margin-left: 150px;
   background: rgba(120, 120, 120, 0.1);
 
 }
+

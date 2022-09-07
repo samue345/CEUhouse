@@ -87,94 +87,107 @@ $tarefas = $imoveisService->recuperar2($id2);
         </ul>
 
     </nav>
-    <h4 >Republica:</h4>
-    <div class="cont bg-warning">
+    <div class="cont" id="sec-caro">
         <div class="row justify-content-center mb-2">
-        <div class="col-lg-10">
-            <div id="demo" class="carousel slide" data-ride="carousel">
+            <div class="col-lg-10">
+                <div id="demo" class="carousel slide" data-ride="carousel">
 
-                <!-- Indicators -->
-                <ul class="carousel-indicators">
-                    <? $i = 0;
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                        <? $i = 0;
+                        foreach ($tarefas as $row) {
+                            $actives = '';
+                            if ($i == 0) {
+                                $actives = 'active';
+                            }
+                        ?>
+                            <li data-target="#demo" data-slide-to="<?= $i ?>" class="<?= $actives ?>"></li>
+
+                    </ul>
+                <? $i++;
+                        } ?>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <?php
+                    $i = 0;
                     foreach ($tarefas as $row) {
                         $actives = '';
                         if ($i == 0) {
                             $actives = 'active';
                         }
                     ?>
-                        <li data-target="#demo" data-slide-to="<?= $i ?>" class="<?= $actives ?>"></li>
-
-                </ul>
-            <? $i++;
+                        <div class="carousel-item <?= $actives; ?>">
+                            <img src="<?= $row->imagens ?>" class="img_b">
+                        </div>
+                    <? $i++;
                     } ?>
 
-            <!-- The slideshow -->
-            <div class="carousel-inner">
-                <?php
-                $i = 0;
-                foreach ($tarefas as $row) {
-                    $actives = '';
-                    if ($i == 0) {
-                        $actives = 'active';
-                    }
-                ?>
-                    <div class="carousel-item <?= $actives; ?>">
-                        <img src="<?= $row->imagens ?>" width="400" height="400">
-                    </div>
-                    <? $i++;} ?>
+                </div>
 
-            </div>
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
 
-                    <!-- Left and right controls -->
-                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#demo" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </a>
-
-            </div>
+                </div>
             </div>
         </div>
     </div>
-    <section>
-        <?$id=0;
-        foreach($tarefas as $key => $row){?>
-            <?if($row->id_matricula != $id){?>
-                <ul>
-                   <li class="info_re"> <p class="info_re-span">nome do anfitrião:</p><?=$row->nome_anfitriao?></li>
-                    <li class="info_re"><p class="info_re-span">apartamento:</p><?=$row->apartamento?></li>
-                    <li class="info_re"><p class="info_re-span">bloco:</p><?=$row->bloco?></li>
-                    <li class="info_re"><p class="info_re-span">numero de pessoas da Republica:</p> <?=$row->numero_de_pessoas?></li>
-                    <li class="info_re"><p class="info_re-span">Republica:</p><?=$row->sexo?></li>
+    <div>
+        <section id="meu">
+            <? $id = 0;
+            foreach ($tarefas as $key => $row) { ?>
+                <? if ($row->id_matricula != $id) { ?>
+                    <ul class="flex">
+                        <li class="info_re"><i class="fa-solid fa-chess-king"></i><span class="info_re-span">nome do anfitrião:</span> <?= $row->nome_anfitriao ?></li>
+                        <li class="info_re"><span class="info_re-span">apto:</span> <?= $row->apartamento ?></li>
+                        <li class="info_re"><i class="fa-solid fa-building"></i><span class="info_re-span">bloco:</span> <?= $row->bloco ?></li>
+                        <li class="info_re"><i class="fa-solid fa-person"></i><span class="info_re-span">numero de pessoas:</span> <?= $row->numero_de_pessoas ?></li>
+                        <? if ($row->sexo == 'masculina') { ?>
+                            <li class="info_re"><i class="fa-solid fa-mars"></i><span class="info_re-span">Republica:</span> <?= $row->sexo ?></li>
+                        <? } ?>
+                        <? if ($row->sexo == 'feminina') { ?>
+                            <li class="info_re"><i class="fa-solid fa-venus"></i><span class="info_re-span">Republica:</span> <?= $row->sexo ?></li>
+                        <? } ?>
 
-                </ul>
-                <?} $id=$row->id_matricula; ?>
-       <? }?>
-    </section>
+                    </ul>
+                <? }
+                $id = $row->id_matricula; ?>
+            <? } ?>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quo, mollitia tenetur laboriosam, a voluptas magni quis repellat architecto dolores veritatis voluptatum est libero nesciunt esse magnam expedita sint ad?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quo, mollitia tenetur laboriosam, a voluptas magni quis repellat architecto dolores veritatis voluptatum est libero nesciunt esse magnam expedita sint ad?</p>
+        </section>
+        <section>
+
+        </section>
+    </div>
     <footer id="rodapé" class="flex">
         <ul id="ul-r" class="flex">
-        <li class="li-ro"><a href="#" class="link-ro">Politica de privacidade <i class="fa-solid fa-arrow-right"></i></a></li>
-       <li class="li-ro"><a href="#" class="link-ro">Termos e condições de uso <i class="fa-solid fa-arrow-right"></i></a></li>
-       <li class="li-ro"><a href="#" class="link-ro"> Política de Cookies <i class="fa-solid fa-arrow-right"></i></a></li>
-       <li class="li-ro"><a href="#" class="link-ro">Manual do usuário <i class="fa-solid fa-arrow-right"></i></a></li>
+            <li class="li-ro"><a href="#" class="link-ro">Politica de privacidade <i class="fa-solid fa-arrow-right"></i></a></li>
+            <li class="li-ro"><a href="#" class="link-ro">Termos e condições de uso <i class="fa-solid fa-arrow-right"></i></a></li>
+            <li class="li-ro"><a href="#" class="link-ro"> Política de Cookies <i class="fa-solid fa-arrow-right"></i></a></li>
+            <li class="li-ro"><a href="#" class="link-ro">Manual do usuário <i class="fa-solid fa-arrow-right"></i></a></li>
         </ul>
         <ul class="flex" id="ul-ro2">
-       <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-facebook-f fa-lg" class ="icone"></i></a></li>
-       <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-instagram fa-lg" class ="icone"></i></a></li>
-       <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-linkedin-in fa-lg" class ="icone"></i></a></li>
+            <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-facebook-f fa-lg" class="icone"></i></a></li>
+            <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-instagram fa-lg" class="icone"></i></a></li>
+            <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-linkedin-in fa-lg" class="icone"></i></a></li>
         </ul>
     </footer>
- 
 
 
 
 
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="SW.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="SW.js"></script>
 </body>
 
 </html>
