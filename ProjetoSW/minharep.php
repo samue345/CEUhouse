@@ -26,7 +26,7 @@ $tarefas = $imoveisService->recuperar2($id2);
 </head>
 
 <body>
-    <header>
+<header>
         <nav class="navbar navbar-expand-lg navbar-light  navegacao-1">
             <a class="navbar-brand" href="index.php">
                 <img src="images/logo.png" class="logo">
@@ -67,6 +67,7 @@ $tarefas = $imoveisService->recuperar2($id2);
         </nav>
 
     </header>
+   
     <nav class=" navegacao">
         <ul class="flex ul-2">
             <li class="lista-2">
@@ -85,8 +86,8 @@ $tarefas = $imoveisService->recuperar2($id2);
                 <a href="" class="link-li2">Melhores avaliações</a>
             </li>
         </ul>
-
     </nav>
+
     <div class="flex" id="sec-caro">
         <div class="row justify-content-center mb-2 cont">
             <div class="col-lg-10">

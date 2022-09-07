@@ -459,16 +459,25 @@ margin-left: 150px;
 
 }
 
+
+
+.grid_d{
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  margin-left: 5%;
+}
 /*informações da republica*/
 .cont
 {
   width: 700px;
   height: 400px;
 }
-.grid_d{
-  display: grid;
-  grid-template-columns: 300px 300px 300px 300px;
-  margin-left: 5%;
+#sec-caro
+{
+background: rgba(120, 120, 120, 0.3);
+position: relative;
+bottom: 16px;
+height: 380px;
 }
 .info_re-span
 {
