@@ -87,8 +87,8 @@ $tarefas = $imoveisService->recuperar2($id2);
         </ul>
 
     </nav>
-    <div class="cont" id="sec-caro">
-        <div class="row justify-content-center mb-2">
+    <div class="flex" id="sec-caro">
+        <div class="row justify-content-center mb-2 cont">
             <div class="col-lg-10">
                 <div id="demo" class="carousel slide" data-ride="carousel">
 
@@ -136,6 +136,9 @@ $tarefas = $imoveisService->recuperar2($id2);
                 </div>
             </div>
         </div>
+        <div >
+            <h5 class="h5_re"> fotos da Republica</h5>
+        </div>
     </div>
     <div>
         <section id="meu">
@@ -143,18 +146,18 @@ $tarefas = $imoveisService->recuperar2($id2);
             foreach ($tarefas as $key => $row) { ?>
                 <? if ($row->id_matricula != $id) { ?>
                     <ul class="flex">
-                        <li class="info_re"><i class="fa-solid fa-chess-king"></i><span class="info_re-span">nome do anfitrião:</span> <?= $row->nome_anfitriao ?></li>
-                        <li class="info_re"><i class="fa-solid fa-house"></i><span class="info_re-span">apto:</span> <?= $row->apartamento ?></li>
-                        <li class="info_re"><i class="fa-solid fa-building"></i><span class="info_re-span">bloco:</span> <?= $row->bloco ?></li>
+                        <li class="info_re"><i class="fa-solid fa-chess-king icone-info" ></i><span class="info_re-span">nome do anfitrião:</span> <?= $row->nome_anfitriao ?></li>
+                        <li class="info_re"><i class="fa-solid fa-house icone-info"></i><span class="info_re-span">apto:</span> <?= $row->apartamento ?></li>
+                        <li class="info_re"><i class="fa-solid fa-building icone-info"></i><span class="info_re-span">bloco:</span> <?= $row->bloco ?></li>
                         <li class="info_re"><i class="fa-solid fa-person"></i><span class="info_re-span">numero de pessoas:</span> <?= $row->numero_de_pessoas ?></li>
                         <? if ($row->sexo == 'masculina') { ?>
-                            <li class="info_re"><i class="fa-solid fa-mars"></i><span class="info_re-span">Republica:</span> <?= $row->sexo ?></li>
+                            <li class="info_re"><i class="fa-solid fa-mars icone-info"></i><span class="info_re-span">Republica:</span> <?= $row->sexo ?></li>
                         <? } ?>
                         <? if ($row->sexo == 'feminina') { ?>
-                            <li class="info_re"><i class="fa-solid fa-venus"></i><span class="info_re-span">Republica:</span> <?= $row->sexo ?></li>
+                            <li class="info_re"><i class="fa-solid fa-venus icone-info"></i><span class="info_re-span">Republica:</span> <?= $row->sexo ?></li>
                         <? } ?>
                         <? if ($row->sexo == 'mista') { ?>
-                            <li class="info_re"><i class="fa-solid fa-venus-mars"></i><span class="info_re-span">Republica:</span> <?= $row->sexo ?></li>
+                            <li class="info_re"><i class="fa-solid fa-venus-mars icone-info"></i><span class="info_re-span">Republica:</span> <?= $row->sexo ?></li>
                         <? } ?>
 
 
@@ -162,8 +165,8 @@ $tarefas = $imoveisService->recuperar2($id2);
                 <? }
                 $id = $row->id_matricula; ?>
             <? } ?>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quo, mollitia tenetur laboriosam, a voluptas magni quis repellat architecto dolores veritatis voluptatum est libero nesciunt esse magnam expedita sint ad?</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quo, mollitia tenetur laboriosam, a voluptas magni quis repellat architecto dolores veritatis voluptatum est libero nesciunt esse magnam expedita sint ad?</p>
+            <p class="p-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quo, mollitia tenetur laboriosam, a voluptas magni quis repellat architecto dolores veritatis voluptatum est libero nesciunt esse magnam expedita sint ad?</p>
+            <p  class="p-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quo, mollitia tenetur laboriosam, a voluptas magni quis repellat architecto dolores veritatis voluptatum est libero nesciunt esse magnam expedita sint ad?</p>
         </section>
         <section>
 

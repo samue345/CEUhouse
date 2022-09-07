@@ -474,6 +474,7 @@ margin-left: 150px;
 {
  font-size: 18px;
   color: #137000;
+  padding: 5px;
 
 }
 .info_re
@@ -484,16 +485,18 @@ padding: 10px;
 }
 .img_b
 {
-  width: 990px;
-  height: 400px;
+  width: 700px;
+  height: 380px;
   position: relative;
-  left: 60px;
 }
-
-#sec-caro
+.p-info
 {
-  background: #343B30;
-  width: 100%;
+  margin-left: 5px;
+}
+.h5_re
+{
+  padding: 2px;
+  word-wrap: normal;
 }
 #meu
 {
