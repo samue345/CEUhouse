@@ -505,7 +505,9 @@ padding: 10px;
 .h5_re
 {
   padding: 2px;
-  word-wrap: normal;
+  margin-top: 2px;
+  letter-spacing: 10px;
+
 }
 #meu
 {
@@ -536,7 +538,7 @@ padding: 10px;
 #rodapé
 {
   background: #395152;
-  height: 100px;
+  height: 65px;
   justify-content: space-around;
 
   

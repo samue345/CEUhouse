@@ -138,7 +138,11 @@ $tarefas = $imoveisService->recuperar2($id2);
             </div>
         </div>
         <div >
-            <h5 class="h5_re"> fotos da Republica</h5>
+            <h5 class="h5_re"> fotos da Republica!</h5>
+            <p class="p-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quo, mollitia tenetur laboriosam, a voluptas magni quis repellat architecto dolores veritatis voluptatum est libero nesciunt esse magnam expedita sint ad?</p>
+            <p  class="p-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quo, mollitia tenetur laboriosam, a voluptas magni quis repellat architecto dolores veritatis voluptatum est libero nesciunt esse magnam expedita sint ad?</p>
+        </section>
+
         </div>
     </div>
     <div>
@@ -169,9 +173,7 @@ $tarefas = $imoveisService->recuperar2($id2);
             <p class="p-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quo, mollitia tenetur laboriosam, a voluptas magni quis repellat architecto dolores veritatis voluptatum est libero nesciunt esse magnam expedita sint ad?</p>
             <p  class="p-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quo, mollitia tenetur laboriosam, a voluptas magni quis repellat architecto dolores veritatis voluptatum est libero nesciunt esse magnam expedita sint ad?</p>
         </section>
-        <section>
-
-        </section>
+       
     </div>
     <footer id="rodapé" class="flex">
         <ul id="ul-r" class="flex">
@@ -180,11 +182,15 @@ $tarefas = $imoveisService->recuperar2($id2);
             <li class="li-ro"><a href="#" class="link-ro"> Política de Cookies <i class="fa-solid fa-arrow-right"></i></a></li>
             <li class="li-ro"><a href="#" class="link-ro">Manual do usuário <i class="fa-solid fa-arrow-right"></i></a></li>
         </ul>
+        <ul>
+        
         <ul class="flex" id="ul-ro2">
             <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-facebook-f fa-lg" class="icone"></i></a></li>
             <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-instagram fa-lg" class="icone"></i></a></li>
             <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-linkedin-in fa-lg" class="icone"></i></a></li>
         </ul>
+    
+
     </footer>
 
 
