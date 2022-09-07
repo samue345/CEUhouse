@@ -144,7 +144,7 @@ $tarefas = $imoveisService->recuperar2($id2);
                 <? if ($row->id_matricula != $id) { ?>
                     <ul class="flex">
                         <li class="info_re"><i class="fa-solid fa-chess-king"></i><span class="info_re-span">nome do anfitrião:</span> <?= $row->nome_anfitriao ?></li>
-                        <li class="info_re"><span class="info_re-span">apto:</span> <?= $row->apartamento ?></li>
+                        <li class="info_re"><i class="fa-solid fa-house"></i><span class="info_re-span">apto:</span> <?= $row->apartamento ?></li>
                         <li class="info_re"><i class="fa-solid fa-building"></i><span class="info_re-span">bloco:</span> <?= $row->bloco ?></li>
                         <li class="info_re"><i class="fa-solid fa-person"></i><span class="info_re-span">numero de pessoas:</span> <?= $row->numero_de_pessoas ?></li>
                         <? if ($row->sexo == 'masculina') { ?>
@@ -153,6 +153,10 @@ $tarefas = $imoveisService->recuperar2($id2);
                         <? if ($row->sexo == 'feminina') { ?>
                             <li class="info_re"><i class="fa-solid fa-venus"></i><span class="info_re-span">Republica:</span> <?= $row->sexo ?></li>
                         <? } ?>
+                        <? if ($row->sexo == 'mista') { ?>
+                            <li class="info_re"><i class="fa-solid fa-venus-mars"></i><span class="info_re-span">Republica:</span> <?= $row->sexo ?></li>
+                        <? } ?>
+
 
                     </ul>
                 <? }
