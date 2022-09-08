@@ -19,18 +19,23 @@ if (isset($_GET['filtro']) && $_GET['filtro'] == 1)
 if ($acao == 'inserir') 
 {
     $imoveis = new Imoveis();
-
-    $arquivo = $_FILES['fotoAP'];
-    $pasta = 'images/fotoApre/';
-    if ($arquivo['error'])
+    if(isset($_FILES['fotoAP']))
+    {
+      $arquivo = $_FILES['fotoAP'];
+      $pasta = 'images/fotoApre/';
+      if ($arquivo['error'])
         die("falha ao enviar arquivo");
 
-    $nomeAr = $arquivo['name'];
-    $novoNome = uniqid();
-    $extensao = strtolower(pathinfo($nomeAr, PATHINFO_EXTENSION));
-    $path = $pasta . $novoNome . "." . $extensao;
-    $deu_certo = move_uploaded_file($arquivo['tmp_name'], $path);
-    $imoveis->__set("fotoA", $path);
+      $nomeAr = $arquivo['name'];
+      $novoNome = uniqid();
+      $extensao = strtolower(pathinfo($nomeAr, PATHINFO_EXTENSION));
+      if($extensao == 'png' || $extensao == 'jpeg')
+      {
+        $path = $pasta . $novoNome . "." . $extensao;
+        $deu_certo = move_uploaded_file($arquivo['tmp_name'], $path);
+        $imoveis->__set("fotoA", $path);
+      }
+    }
 
     $imoveis->__set("nome_anfitriao", $_POST['nome_anfitriao']);
     $imoveis->__set("apto", $_POST['apar']);

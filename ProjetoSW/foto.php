@@ -80,7 +80,7 @@
 
     </form>
     <?if(isset($_GET['certo']) && $_GET['certo']==0){?>
-      <p style="color: red;">O arquivo enviado não é valido, somente envie arquivos jpeg ou png</p>
+      <p class="erro">O arquivo enviado não é valido, somente envie arquivos jpeg ou png!</p>
       <?}?>
     
     <form action="foto.php?criou=1"  method="post">

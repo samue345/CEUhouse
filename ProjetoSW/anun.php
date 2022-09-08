@@ -106,6 +106,9 @@ if (isset($_GET['criou']) && $_GET['criou'] == 1) {
             </textarea>
         <label for="foto" class="fide">Fotos de apresentação: </label>
         <input type="file" name="fotoAP" class="fide" required>
+        <?if(isset($_GET['erro']) && $_GET['erro']==0){?>
+      <p class="erro">O arquivo enviado não é valido, somente envie arquivos jpeg ou png!</p>
+      <?}?>
 
         <button type="submit" class="envia_f">proxímo</button>
       </div>

@@ -339,7 +339,7 @@ margin-left: 150px;
 
 }
 .finaliza{
-  top: 80%;
+  top: 90%;
   position: absolute;
   left: 70%;
   width: 400px;
@@ -348,6 +348,12 @@ margin-left: 150px;
   border: none;
 
 
+}
+.erro
+{
+  color: red;
+  margin-left: 25%;
+  margin-top: 2.6%;
 }
 
 
