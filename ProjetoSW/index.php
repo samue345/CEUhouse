@@ -1,6 +1,11 @@
 <?php
 $acao = 'recuperar';
 require_once "imoveis_controller.php";
+/*
+echo '<pre>';
+print_r($tarefas2);
+echo  "<pre/>";
+*/
 
 ?>
 <!DOCTYPE html>
@@ -85,58 +90,62 @@ require_once "imoveis_controller.php";
     </ul>
 
   </nav>
+
+
+
+
+
   <div class="grid_d">
     <? foreach ($tarefas as $key => $tarefa) { ?>
       <?php $id = $tarefa->id_matricula; ?>
-
-      <div class="index_card" id="imovel_<?= $tarefa->id_matricula ?>" onclick="location.href='minharep.php?id=<?= $tarefa->id_matricula ?>'">
-        <section class="seim">
-          <img src="<?= $tarefa->fotos ?>" alt="" width="276" height="200" class="imgf">
-
-        </section>
-
-        <section class=" info">
-
-          <ul>
-            <li class="lista-card">nome do anfitrião: <?= $tarefa->nome_anfitriao ?></li>
-            <li class="lista-card">bloco: <?= $tarefa->bloco ?></li>
-            <li class="lista-card">apartamento: <?= $tarefa->apartamento ?></li>
-            <li class="lista-card">numero de pessoas: <?= $tarefa->numero_de_pessoas ?></li>
-          </ul>
+      <section>
+         iamaga
+      </section>
 
 
-        </section>
+      <section class=" info">
 
-      </div>
+        <ul>
+          <li class="lista-card">nome do anfitrião: <?= $tarefa->nome_anfitriao ?></li>
+          <li class="lista-card">bloco: <?= $tarefa->bloco ?></li>
+          <li class="lista-card">apartamento: <?= $tarefa->apartamento ?></li>
+          <li class="lista-card">numero de pessoas: <?= $tarefa->numero_de_pessoas ?></li>
+        </ul>
 
-    <? } ?>
+
+      </section>
+
   </div>
 
-  <footer id="rodapé" class="flex">
-        <ul id="ul-r" class="flex">
-            <li class="li-ro"><a href="#" class="link-ro">Politica de privacidade <i class="fa-solid fa-arrow-right"></i></a></li>
-            <li class="li-ro"><a href="#" class="link-ro">Termos e condições de uso <i class="fa-solid fa-arrow-right"></i></a></li>
-            <li class="li-ro"><a href="#" class="link-ro"> Política de Cookies <i class="fa-solid fa-arrow-right"></i></a></li>
-            <li class="li-ro"><a href="#" class="link-ro">Manual do usuário <i class="fa-solid fa-arrow-right"></i></a></li>
-        </ul>
-        <ul>
-        
-        <ul class="flex" id="ul-ro2">
-            <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-facebook-f fa-lg" class="icone"></i></a></li>
-            <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-instagram fa-lg" class="icone"></i></a></li>
-            <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-linkedin-in fa-lg" class="icone"></i></a></li>
-        </ul>
-    
-
-    </footer>
+<? } ?>
+</div>
 
 
+<footer id="rodapé" class="flex">
+  <ul id="ul-r" class="flex">
+    <li class="li-ro"><a href="#" class="link-ro">Politica de privacidade <i class="fa-solid fa-arrow-right"></i></a></li>
+    <li class="li-ro"><a href="#" class="link-ro">Termos e condições de uso <i class="fa-solid fa-arrow-right"></i></a></li>
+    <li class="li-ro"><a href="#" class="link-ro"> Política de Cookies <i class="fa-solid fa-arrow-right"></i></a></li>
+    <li class="li-ro"><a href="#" class="link-ro">Manual do usuário <i class="fa-solid fa-arrow-right"></i></a></li>
+  </ul>
+  <ul>
+
+    <ul class="flex" id="ul-ro2">
+      <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-facebook-f fa-lg" class="icone"></i></a></li>
+      <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-instagram fa-lg" class="icone"></i></a></li>
+      <li class="li-ro2"><a href="#" class="link-ro2"><i class="fa-brands fa-linkedin-in fa-lg" class="icone"></i></a></li>
+    </ul>
 
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="SW.js"></script>
+</footer>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="SW.js"></script>
 </body>
 
 </html>
