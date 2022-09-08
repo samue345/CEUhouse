@@ -68,7 +68,7 @@ require_once "imoveis_controller.php";
     <ul class="flex ul-2">
       <li class="lista-2" id="filtro"><i class="fa-solid fa-bars"></i> filtros </li>
       <li class="lista-2">
-        <a href="" class="link-li2">sobre</a>
+        <a href="" class="link-li2"></a>
       </li>
       <li class="lista-2">
         <a href="" class="link-li2">favoritos</a>
