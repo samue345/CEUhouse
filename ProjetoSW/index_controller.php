@@ -19,7 +19,7 @@ if (isset($_FILES['fotos'])) {
     $novoNome = uniqid();
     $extensao = strtolower(pathinfo($nomeAr, PATHINFO_EXTENSION));
 
-    if ($extensao == 'png' || $extensao == 'jpeg') {
+    if ($extensao == 'png' || $extensao == 'jpeg' || $extensao == 'jpg') {
         $path = $pasta . $novoNome . "." . $extensao;
         $deu_certo = move_uploaded_file($arquivo['tmp_name'], $path);
 
