@@ -119,13 +119,13 @@ echo '<pre/>';
     <? }*/ ?>
   </div>
   !-->
-
+  <div class="grid_d">
   <?
     $j=0;
     $mat=0;
   foreach($tarefas2 as $key => $imovel){
     $id=$imovel->id_matricula?>
-  <div class="container-fluid bg-warning">
+  <div class="container-fluid">
     <div class="row justify-content-center mb-2">
       <div class="col-lg-10">
         <div id="demo<?=strval($j)?>" class="carousel slide" data-ride="carousel">
@@ -178,7 +178,7 @@ echo '<pre/>';
 
       </div>
     </div>
-
+  </div>
 
   </div>
   <?if($imovel->id_matricula != $mat)
