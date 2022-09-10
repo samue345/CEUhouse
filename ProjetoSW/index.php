@@ -194,97 +194,96 @@ require_once "imoveis_controller.php";
 
   <div class="grid_d">
     <? $j = 0;
-      $mat = 0;
+    $mat = 0;
     foreach ($tarefas2 as $key => $tarefa) { ?>
       <?php $id = $tarefa->id_matricula; ?>
       <? if ($tarefa->id_matricula != $mat) { ?>
-      <div class="index_card" id="imovel_<?= $tarefa->id_matricula ?>">
-        <section class="seim">
-   
+        <div class="index_card" id="imovel_<?= $tarefa->id_matricula ?>">
+          <section class="seim">
 
-          <div class="container-fluid">
-            <div class="row justify-content-center mb-2">
-              <div class="col-lg-10">
-                <div id="demo<?= strval($j) ?>" class="carousel slide" data-ride="carousel">
 
-                  <!-- Indicators -->
-                  <ul class="carousel-indicators">
-                    <?php
-                    $i = 0;
-                    foreach ($tarefas2 as $key => $row) {
+            <div class="container-fluid">
+              <div class="row justify-content-center mb-2">
+                <div class="col-lg-10">
+                  <div id="demo<?= strval($j) ?>" class="carousel slide" data-ride="carousel">
 
-                      $actives = '';
-                      if ($i == 0) {
-                        $actives = 'active';
-                      }
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                      <?php
+                      $i = 0;
+                      foreach ($tarefas2 as $key => $row) {
 
-                    ?>
-                      <?if($id==$row->id_matricula){?>
-                      <li data-target="#demo<?= strval($j) ?>" data-slide-to="<?= $i; ?>" class="<?= $actives; ?>"></li>
-                      <?}?>
-        
-                    <?php $i++; } ?>
-                  
-                  </ul>
+                        $actives = '';
+                        if ($i == 0) {
+                          $actives = 'active';
+                        }
 
-                  <!-- The slideshow -->
-                  <div class="carousel-inner">
-                    <?php
-                    $i = 0;
-                    foreach ($tarefas2 as $key => $row) {
-                      $actives = '';
-                      if ($i == 0) {
-                        $actives = 'active';
-                      }
-                    ?>
-                     <?/*=$id;*/?>
-             
-                      <?if($id==$row->id_matricula){?>
-                       
+                      ?>
+                        <? if ($id == $row->id_matricula) { ?>
+                          <li data-target="#demo<?= strval($j) ?>" data-slide-to="<?= $i; ?>" class="<?= $actives; ?>"></li>
+                        <? } ?>
 
-                      <div class="carousel-item <?= $actives; ?>">
-                      <?= $row->id_matricula;?>
-                        <?=$id;?>
-                     
-                          <img src="<?= $row->imagens?>" width="200" height="200">
-                      </div>
-             
-                    <? $i++;} ?>
-                    <?}?>
+                      <?php $i++;
+                      } ?>
+
+                    </ul>
+
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                      <?php
+                      $i = 0;
+                      foreach ($tarefas2 as $key => $row) {
+                        $actives = '';
+                        if ($i == 0) {
+                          $actives = 'active';
+                        }
+                      ?>
+
+                        <? if ($id == $row->id_matricula) { ?>
+
+
+                          <div class="carousel-item <?= $actives; ?>">
+                            <img src="<?= $row->imagens ?>" width="200" height="200">
+                          </div>
+
+                        <? $i++;
+                        } ?>
+                      <? } ?>
+                    </div>
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo<?= strval($j) ?>" data-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo<?= strval($j) ?>" data-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                    </a>
+
                   </div>
-                  <!-- Left and right controls -->
-                  <a class="carousel-control-prev" href="#demo<?= strval($j) ?>" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                  </a>
-                  <a class="carousel-control-next" href="#demo<?= strval($j) ?>" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                  </a>
 
                 </div>
-
               </div>
+
             </div>
 
-          </div>
-    
 
-        </section>
+          </section>
 
-        <section class=" info">
+          <section class=" info">
 
             <?= $tarefa->id_matricula ?>
             <?= $tarefa->apartamento ?>
             <?= $tarefa->bloco ?>
             <?= $tarefa->matricula ?>
-      
-  
 
 
-        </section>
 
-      </div>
 
-    <?} $mat = $tarefa->id_matricula?>
+          </section>
+
+        </div>
+
+      <? }
+      $mat = $tarefa->id_matricula ?>
 
     <? $j++;
     } ?>
