@@ -477,8 +477,10 @@ margin-left: 150px;
 /*informações da republica*/
 .cont
 {
-  width: 700px;
-  height: 400px;
+  width: 337px;
+  height: 200px;
+  position: relative;
+  right: 31px;
 }
 #sec-caro
 {
@@ -502,9 +504,10 @@ padding: 10px;
 }
 .img_b
 {
-  width: 700px;
-  height: 380px;
+  width: 278px;
+  height: 200px;
   position: relative;
+
 }
 .p-info
 {

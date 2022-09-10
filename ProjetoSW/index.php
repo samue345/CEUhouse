@@ -202,7 +202,7 @@ require_once "imoveis_controller.php";
           <section class="seim">
 
 
-            <div class="container-fluid">
+            <div class="cont">
               <div class="row justify-content-center mb-2">
                 <div class="col-lg-10">
                   <div id="demo<?= strval($j) ?>" class="carousel slide" data-ride="carousel">
@@ -243,7 +243,7 @@ require_once "imoveis_controller.php";
 
 
                           <div class="carousel-item <?= $actives; ?>">
-                            <img src="<?= $row->imagens ?>" width="200" height="200">
+                            <img src="<?= $row->imagens ?>" class="img_b">
                           </div>
 
                         <? $i++;
