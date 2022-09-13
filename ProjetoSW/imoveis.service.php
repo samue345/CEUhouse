@@ -12,7 +12,7 @@ class imoveisService
 
     public function criar()
     {   
-        $query="insert into info_m(apartamento, nome_anfitriao, matricula, bloco, numero_de_pessoas, fotos, sexo) values(:re, :nome_a, :mat, :blo, :nupe, :f, :s)";
+        $query="insert into info_m(apartamento, nome_anfitriao, matricula, bloco, numero_de_pessoas, sexo) values(:re, :nome_a, :mat, :blo, :nupe, :s)";
       
 
          $smt=$this->conexao->prepare($query);
@@ -22,7 +22,7 @@ class imoveisService
         $smt->bindValue(':mat', $this->imoveis->__get('matricula'));
         $smt->bindValue(':blo', $this->imoveis->__get('bloco'));
         $smt->bindValue(':nupe', $this->imoveis->__get('numero_de_pessoas'));
-        $smt->bindValue(':f', $this->imoveis->__get('fotoA'));
+       // $smt->bindValue(':f', $this->imoveis->__get('fotoA'));
         $smt->bindValue(':s', $this->imoveis->__get('sexo'));
 
         $smt->execute();
@@ -30,6 +30,7 @@ class imoveisService
         $_SESSION['id']=$id;
         
     }
+  
     public function criarfoto()
     {
  
@@ -93,12 +94,8 @@ class imoveisService
               return $smt->fetchall(PDO::FETCH_OBJ);
             }
         
-        
-        
-        
-        
-        
-      }else
+      }
+      else
       {
     
 
