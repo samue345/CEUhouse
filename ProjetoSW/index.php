@@ -168,7 +168,7 @@ require_once "imoveis_controller.php";
 
           </section>
 
-          <section class=" info">
+          <section class=" info" onclick="location.href='minharep.php?id=<?= $tarefa->id_matricula ?>'">
             <ul>
             <li class="lista-card">nome do anfitrião: <?= $tarefa->nome_anfitriao ?></li>
             <li class="lista-card">bloco: <?= $tarefa->bloco ?></li>
