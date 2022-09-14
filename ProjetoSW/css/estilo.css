@@ -274,6 +274,17 @@ margin-left: 150px;
 
 
 }
+.foto
+{
+  border: 1px solid red;
+
+}
+
+.sec_descricao
+{
+  border: 1px solid red;
+}
+
 .texto{
   margin-left: 150px;
 }
@@ -295,6 +306,11 @@ margin-left: 150px;
   color: #343B30;
   letter-spacing: 5px;
 
+}
+.divo-foto
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 

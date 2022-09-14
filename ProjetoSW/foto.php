@@ -61,36 +61,44 @@ session_start();
     </nav>
 
   </header>
-  <? if (isset($_GET['criou']) && $_GET['criou'] == 1) { ?>
+  <div class="divo-foto">
+  <section class="foto">
+  <input type="file">
+  <button><input type="submit"></button>
+  </section>
+  
+  <section class="sec_descricao">
+      <label for="fotos">Descricao</label>
+      <textarea name="" id="fotos" cols="30" rows="5"></textarea>
+    </section>
+
+
+  </div>
+
+<!-- <div class="div-foto">
+    <section class="foto">
+            <input type="file" placeholder="coloque pelo menos 2 fotos">
+
+    <button><input type="submit"></button>
+    </section>
+    
+    <section class="sec_descricao">
+      <label for="fotos">Descricao</label>
+      <textarea name="" id="fotos" cols="30" rows="5"></textarea>
+    </section>
+  </div>-->
+  <?/* if (isset($_GET['criou']) && $_GET['criou'] == 1) { ?>
     <section class="sucesso">
       <h5 class="suc">Republica criada!</h5>
     </section>
-  <? } ?>
-  <h4 class="h4_foto">Envie mais fotos do quarto ou apartamento</h4>
-  <div class="flex">
-    <section>
-      <form action="index_controller.php?acao=1" enctype="multipart/form-data" method="post" class="formulario_foto">
-        <input type="file" name="fotos">
-        <input type="hidden" name="info" value="Test">
-        <br>
-        <button type="submit">enviar</button>
-
-      </form>
-      <? if (isset($_GET['certo']) && $_GET['certo'] == 0) { ?>
+  <? } */?>
+ 
+    
+      <?/* if (isset($_GET['certo']) && $_GET['certo'] == 0) { ?>
         <p class="erro">O arquivo enviado não é valido, somente envie arquivos jpeg ou png!</p>
-      <? } ?>
+      <? } */?>
 
-    </section>
-
-    <section>
-      <label for="des"></label>
-      <textarea name="descricai" id="des" cols="40" rows="5"></textarea>
-    </section>
-  </div>
-
-  <form action="foto.php?criou=1" method="post">
-    <button type="submit">Finalizar</button>
-  </form>
+   
 
 
 
@@ -98,8 +106,7 @@ session_start();
 
 
 
-
-
+<!--
 
 
   <footer id="rodapé2" class="flex">
@@ -119,6 +126,7 @@ session_start();
 
 
   </footer>
+      -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
