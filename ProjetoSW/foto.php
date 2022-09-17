@@ -66,6 +66,7 @@
       </section>
       <?} ?>
     
+    <h4 class="h4_foto">Envie mais fotos do quarto ou apartamento aaa</h4>
     <div class="div-foto">
     <form action="index_controller.php?acao=1"  enctype="multipart/form-data" method="post"  class="formulario_foto">
       <section class="fotoin">
