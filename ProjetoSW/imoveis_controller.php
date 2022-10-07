@@ -5,12 +5,14 @@ session_start();
 require "conexao.php";
 require "imoveis.service.php";
 require "imoveis.model.php";
+require "login_service.php";
 
 
 if (isset($_GET['acao'])) 
 {
     $acao = $_GET['acao'];
 }
+
 if (isset($_GET['filtro']) && $_GET['filtro'] == 1) 
 {
     $filtro = $_GET['filtro'];
@@ -18,39 +20,20 @@ if (isset($_GET['filtro']) && $_GET['filtro'] == 1)
 
 if ($acao == 'inserir') 
 {
+   echo $_SESSION['id-usu'];
     $imoveis = new Imoveis();
-    if(isset($_FILES['fotoAP']))
-    {
-      $arquivo = $_FILES['fotoAP'];
-      $pasta = 'images/fotoApre/';
-      if ($arquivo['error'])
-        die("falha ao enviar arquivo");
-
-      $nomeAr = $arquivo['name'];
-      $novoNome = uniqid();
-      $extensao = strtolower(pathinfo($nomeAr, PATHINFO_EXTENSION));
-      if($extensao == 'png' || $extensao == 'jpeg')
-      {
-        $path = $pasta . $novoNome . "." . $extensao;
-        $deu_certo = move_uploaded_file($arquivo['tmp_name'], $path);
-        $imoveis->__set("fotoA", $path);
-      }
-    }
-
     $imoveis->__set("nome_anfitriao", $_POST['nome_anfitriao']);
     $imoveis->__set("apto", $_POST['apar']);
     $imoveis->__set("matricula", $_POST['matricula']);
     $imoveis->__set("bloco", $_POST['bloco']);
     $imoveis->__set("numero_de_pessoas", $_POST['numero_de_pessoas']);
     $imoveis->__set("sexo", $_POST['sexo']);
+    $imoveis->__set("id_usuario", $_SESSION['id-usu']);
 
     $conexao = new Conexao();
     $imoveisService = new imoveisService($conexao, $imoveis);
     $imoveisService->criar();
-    //header("location: anun.php?criou=1");
-
-
-    header("location: foto.php");
+    header("location: foto.php?id");
 } 
 else if ($acao == 'recuperar') 
 {
@@ -114,4 +97,65 @@ else if ($acao == 'inserir2')
 
     }
 }
+if($acao=='usuario')
+{
+    $conexao = new Conexao();
+    $imoveis = new Imoveis();
+    $loginService = new loginService($conexao, $imoveis);
+    $autenticados= $loginService->recuperar();
+    foreach($autenticados as $key => $autenticado)
+        if($autenticado->login == $_POST['email-u'])
+        {            
+            $_SESSION['autenticado']='nao';
+            header("location: cadastrar.php?existe=1");
+            die();
+        }
+      
+    $imoveis->__set("usuario", $_POST['email-u']);
+    $imoveis->__set("senha", $_POST['senha-u']);
+    $_SESSION['login-u']= $_POST['email-u'];
+    $_SESSION['senha-u'] = $_POST['senha-u'];
+    $_SESSION['autenticado']='sim';
+    $tarefas = $loginService->criarlogin();
+    $tarefas2= $loginService->recuperarCadastro($_POST['email-u'], $_POST['senha-u']);
+    $autenticado= $tarefas2[0]['id_usuario'];
+    $_SESSION['id-usu'] = $autenticado;
+    header("location: index.php?cadastrado=1");
 
+
+    
+}
+if($acao=='logar')
+{
+ 
+        $conexao = new Conexao();
+        $imoveis = new Imoveis();
+        $loginService = new loginService($conexao, $imoveis);
+        $autenticados= $loginService->recuperar();
+       
+        foreach($autenticados as $key => $autenticado)
+        {
+                if($_POST['email']== $autenticado->login && $autenticado->senha == $_POST['senha'])
+                {
+                 $_SESSION['id-usu'] = $autenticado->id_usuario;
+                  $auten=true;
+                }
+        }
+           
+        if($auten == true)
+        {
+         
+            $_SESSION['autenticado']='sim';
+            echo $_SESSION['login-u']= $_POST['email'];
+            echo $_SESSION['senha-u'] = $_POST['senha'];
+           header("location: index.php?logado=1");
+        }
+        else
+        {
+            $_SESSION['autenticado']='nao';
+            echo $_SESSION['autenticado'];
+            header("location: login.php?logado=0");
+
+        }
+
+}
