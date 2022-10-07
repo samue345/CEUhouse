@@ -1,3 +1,8 @@
+<?
+session_start();
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +24,7 @@
 
     <div id="div-login">
       <img src="images/logo.png" alt="" class="logo">
-      <form class="formu-login">
+      <form class="formu-login" action="imoveis_controller.php?acao=logar" method="post">
   
         <button class="botao-login_2"><i class="fa-brands fa-facebook" id="facebook"></i>Continue com o facebook</button>
         <button class="botao-login_2"><i class="fa-brands fa-google" id="google"></i>Continue com o google</button>
@@ -29,17 +34,20 @@
         </div>
 
 
-        <input class="form-login" type="text" id="input-login" placeholder=" Email ou Telefone">
+        <input class="form-login" type="text" id="input-login" placeholder=" Email ou Telefone" name="email">
         <br>
-        <input class="form-login_2" type="password" id="input-senha" placeholder=" Senha">
+        <input class="form-login_2" type="password" id="input-senha" placeholder=" Senha" name="senha">
         <br>
         <button class="botao-login " type="submit">Login</button>
         <br>
         <a href="" class="senhas">Esqueci minha senha</a>
-        <p class="senhas_2">Ainda não tem conta?<a href="cadastrar.html"> cadastre-se</a></p>
+        <p class="senhas_2">Ainda não tem conta?<a href="cadastrar.php"> cadastre-se</a></p>
         
 
         </form>
+        <?if($_SESSION['autenticado'] == 'nao'){?>
+            <p class="p-log">Usuário ou senha incorretos!</p>
+        <?}?>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
