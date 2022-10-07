@@ -8,11 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" class="formulario-cadastro ">
+    <form action="imoveis_controller.php?acao=usuario" class="formulario-cadastro" method="post">
         <h4 class="h1_cadastro">Cadastro</h4>
-        <input type="text" name="" id="" class="nome_usuario" placeholder="nome completo">
+        <input type="text" name="" id="" class="nome_usuario" placeholder="nome completo" name="name-usu">
         <br>
-        <input type="text" name="" id="" class="email_usuario" placeholder="email">
+        <input type="text" class="email_usuario" placeholder="email" name="email-u">
+        <br>
+        <input type="password" class="email_usuario" placeholder="senha" name="senha-u">
         <br>
         <input type="date" name="" id="" class="data_usuario">
         <br>
@@ -24,6 +26,10 @@
                 
         </label>
         <input type="submit" value="cadastrar" class="cadastro_envio">
+        <?if(isset($_GET['existe']) && $_GET['existe'] == 1){?>
+
+            <p class="cor_c">o email cadastrado já existe!</p>
+            <?}?>
     </form> 
 </body>
 </html>
