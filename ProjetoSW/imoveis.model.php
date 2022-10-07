@@ -17,6 +17,12 @@ class Imoveis
     private $p2;
     private $p3;
     private $p4;
+    private $usuario;
+    private $senha;
+    private $id_usuario;
+    private $id_usuario_i;
+
+
 
     
     public function __get($atributo)
