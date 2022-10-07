@@ -34,7 +34,7 @@ class imoveisService
   {
 
 
-    $query = "insert into images(id_imagem, imagens, nomes, id_usuarioI) values(:id, :p, :f, :us)";
+    $query = "insert into images(id_imagem, imagens, nomes, id_usuarioD) values(:id, :p, :f, :us)";
     $smt = $this->conexao->prepare($query);
     $query2 = 'select id_matricula from info_m';
     $smtt = $this->conexao->prepare($query2);
