@@ -26,7 +26,7 @@ $tarefas = $imoveisService->recuperar2($id2);
 </head>
 
 <body>
-<header>
+    <header>
         <nav class="navbar navbar-expand-lg navbar-light  navegacao-1">
             <a class="navbar-brand" href="index.php">
                 <img src="images/logo.png" class="logo">
@@ -67,7 +67,7 @@ $tarefas = $imoveisService->recuperar2($id2);
         </nav>
 
     </header>
-   
+
     <nav class=" navegacao">
         <ul class="flex ul-2">
             <li class="lista-2">
@@ -87,65 +87,15 @@ $tarefas = $imoveisService->recuperar2($id2);
             </li>
         </ul>
     </nav>
+    <div class="imgre">
+    <? 
+    $id2=0;
+        foreach ($tarefas as $key => $row) { ?>
+        <img src="<?= $row->imagens ?>" alt="" width="500" height="300" id="image_<?=$id2?>">
 
-    <div class="flex" id="sec-caro">
-        <div class="row justify-content-center mb-2 cont">
-            <div class="col-lg-10">
-                <div id="demo" class="carousel slide" data-ride="carousel">
-
-                    <!-- Indicators -->
-                    <ul class="carousel-indicators">
-                        <? $i = 0;
-                        foreach ($tarefas as $row) {
-                            $actives = '';
-                            if ($i == 0) {
-                                $actives = 'active';
-                            }
-                        ?>
-                            <li data-target="#demo" data-slide-to="<?= $i ?>" class="<?= $actives ?>"></li>
-
-                    </ul>
-                <? $i++;
-                        } ?>
-
-                <!-- The slideshow -->
-                <div class="carousel-inner">
-                    <?php
-                    $i = 0;
-                    foreach ($tarefas as $row) {
-                        $actives = '';
-                        if ($i == 0) {
-                            $actives = 'active';
-                        }
-                    ?>
-                        <div class="carousel-item <?= $actives; ?>">
-                            <img src="<?= $row->imagens ?>" class="img_b">
-                        </div>
-                    <? $i++;
-                    } ?>
-
-                </div>
-
-                <!-- Left and right controls -->
-                <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#demo" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
-
-                </div>
-            </div>
-        </div>
-        <div >
-            <h5 class="h5_re"> fotos da Republica!</h5>
-            <p class="p-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quo, mollitia tenetur laboriosam, a voluptas magni quis repellat architecto dolores veritatis voluptatum est libero nesciunt esse magnam expedita sint ad?</p>
-            <p  class="p-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quo, mollitia tenetur laboriosam, a voluptas magni quis repellat architecto dolores veritatis voluptatum est libero nesciunt esse magnam expedita sint ad?</p>
-        </section>
-
-        </div>
+    <? $id2++; } ?>
     </div>
-    <div>
+
         <section id="meu">
             <? $id = 0;
             foreach ($tarefas as $key => $row) { ?>
@@ -169,7 +119,7 @@ $tarefas = $imoveisService->recuperar2($id2);
                     </ul>
                 <? }
                 $id = $row->id_matricula; ?>
-            <? } ?>
+            <? }  ?>
             <p class="p-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quo, mollitia tenetur laboriosam, a voluptas magni quis repellat architecto dolores veritatis voluptatum est libero nesciunt esse magnam expedita sint ad?</p>
             <p  class="p-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quo, mollitia tenetur laboriosam, a voluptas magni quis repellat architecto dolores veritatis voluptatum est libero nesciunt esse magnam expedita sint ad?</p>
         </section>
@@ -194,6 +144,7 @@ $tarefas = $imoveisService->recuperar2($id2);
     </footer>
 
 
+    
 
 
 
