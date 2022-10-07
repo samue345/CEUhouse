@@ -1,11 +1,7 @@
 <?php
+
 $acao = 'recuperar';
 require_once "imoveis_controller.php";
-
-//echo '<pre>';
-//print_r($tarefas2);
-//echo '<pre/>';
-
 
 ?>
 <!DOCTYPE html>
@@ -44,36 +40,83 @@ require_once "imoveis_controller.php";
 
         <ul class="navbar-nav ml-auto nave-principal">
 
-          <li class="li-pri">
+        <li class="li-pri">
             <a class="" href="anun.php"><button type="button" id="botao-vaga">Anunciar sua vaga</button></a>
           </li>
 
+
+
+
+
+         
           <li class="nav-item li-pri" id="per">
+          <? if (isset($_SESSION['autenticado']) && $_SESSION['autenticado'] == 'sim') { ?>
             <i class="fa-solid fa-user perfil" id="perfil"></i>
             <div class="caixa-login-some" id="login">
-              <ul>
-                <li>
-                  <a href="login.html" target="_self" class="entrar">entrar</a>
-                </li>
-                <hr>
-                <li>
-                  <a href="cadastrar.html" class="cadastre">Cadastre-se</a>
-                </li>
-              </ul>
+            <input type="hidden" value="1" class="inputf">
+
+                <ul>
+                  <li>
+                    <a href="login.php" target="_self" class="entrar">conta</a>
+                  </li>
+                  <hr>
+                  <li>
+                    <a href="cadastrar.php" class="cadastre">anunciar vaga</a>
+                  </li>
+                  <li>
+                    <a href="logoff.php" class="cadastre">sair</a>
+                  </li>
+                </ul>
             </div>
+            <? } ?>
+
+            <? if (!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] == 'nao') { ?>
+            <i class="fa-solid fa-user perfil" id="perfil"></i>
+            <div class="caixa-login-some" id="login">
+            <input type="hidden" value="2" class="inputf">
+
+                <ul>
+
+                  <li>
+                    <a href="login.php" target="_self" class="entrar">entrar</a>
+                  </li>
+                  <hr>
+                  <li>
+                    <a href="cadastrar.php" class="cadastre">cadastre-se</a>
+                  </li>
+                
+                </ul>
+            </div>
+            <? } ?>
           </li>
 
-        </ul>
+          <?if(isset($_GET['log']) && $_GET['log']=='nao'){?> 
+          <li>
+          <div class="caixa-login" id="login">
+            <input type="hidden" value="2" class="inputf">
+                <ul>
+                  <li>
+                    <a href="login.php" target="_self" class="entrar">entrar</a>
+                  </li>
+                  <hr>
+                  <li>
+                    <a href="cadastrar.php" class="cadastre">cadastre-se</a>
+                  </li>
+                
+                </ul>
+            </div>
+          </li>
+          <?}?>
 
-      </div>
-    </nav>
+          </ul>
+      
 
   </header>
   <nav class=" navegacao">
     <ul class="flex ul-2">
       <li class="lista-2" id="filtro"><i class="fa-solid fa-bars"></i> filtros </li>
       <li class="lista-2">
-        <a href="" class="link-li2">sobre</a>
+        <a href="" class="link-li2">sobrE</a>
       </li>
       <li class="lista-2">
         <a href="" class="link-li2">favoritos</a>
@@ -91,7 +134,7 @@ require_once "imoveis_controller.php";
 
   </nav>
 
-  
+
   <div class="grid_d">
     <? $j = 0;
     $mat = 0;
@@ -170,11 +213,11 @@ require_once "imoveis_controller.php";
 
           <section class=" info" onclick="location.href='minharep.php?id=<?= $tarefa->id_matricula ?>'">
             <ul>
-            <li class="lista-card">nome do anfitrião: <?= $tarefa->nome_anfitriao ?></li>
-            <li class="lista-card">bloco: <?= $tarefa->bloco ?></li>
-            <li class="lista-card">apartamento: <?= $tarefa->apartamento ?></li>
-            <li class="lista-card">numero de pessoas: <?= $tarefa->numero_de_pessoas ?></li>
-          </ul>
+              <li class="lista-card">nome do anfitrião: <?= $tarefa->nome_anfitriao ?></li>
+              <li class="lista-card">bloco: <?= $tarefa->bloco ?></li>
+              <li class="lista-card">apartamento: <?= $tarefa->apartamento ?></li>
+              <li class="lista-card">numero de pessoas: <?= $tarefa->numero_de_pessoas ?></li>
+            </ul>
 
           </section>
 
@@ -188,7 +231,7 @@ require_once "imoveis_controller.php";
   </div>
   <footer id="rodapé" class="flex">
     <ul id="ul-r" class="flex">
-      <li class="li-ro"><a href="#" class="link-ro">Politica de privacidade <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li class="li-ro"><a href="#" class="link-ro">Politica de privacidade<i class="fa-solid fa-arrow-right"></i></a></li>
       <li class="li-ro"><a href="#" class="link-ro">Termos e condições de uso <i class="fa-solid fa-arrow-right"></i></a></li>
       <li class="li-ro"><a href="#" class="link-ro"> Política de Cookies <i class="fa-solid fa-arrow-right"></i></a></li>
       <li class="li-ro"><a href="#" class="link-ro">Manual do usuário <i class="fa-solid fa-arrow-right"></i></a></li>
