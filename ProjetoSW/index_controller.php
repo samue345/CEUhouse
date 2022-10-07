@@ -24,9 +24,9 @@ if (isset($_FILES['fotos'])) {
         $deu_certo = move_uploaded_file($arquivo['tmp_name'], $path);
 
         if ($deu_certo) {
-            echo $path;
             $imoveis->__set("fotos", $path);
             $imoveis->__set("nomeFoto", $nomeAr);
+            $imoveis->__set("id_usuario_i", $_SESSION['id-usu']);
             $conexao = new Conexao();
             $imoveisService = new imoveisService($conexao, $imoveis);
             $imoveisService->criarfoto();
@@ -38,5 +38,5 @@ if (isset($_FILES['fotos'])) {
         header("location: foto.php?certo=0");
     }
 } else {
-    echo "aruqivo não existe";
+    echo "arquivo não existe";
 }
