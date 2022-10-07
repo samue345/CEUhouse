@@ -1,25 +1,30 @@
 window.onload=function(){
- var fil= document.querySelector("#filtro");
-var per=document.getElementById("per");
-
-
-
+var per=document.querySelector("#per");
+var fil=document.querySelector("#filtro");
 function perfil(){
 login.className="caixa-login";  
    
 }
-function apaga(){
-    login.className="caixa-login-some"
-}
+
+document.addEventListener('click', function(e) {
+    if (!per.contains(e.target)) 
+    {
+        login.className = "caixa-login-some";
+    }
+});
+
+
 function filtro(){
 
     window.open("filtro.php", "self", "width=750, height=800");
 
 }
 
-per.addEventListener("mouseover", perfil);
-per.addEventListener("mouseleave", apaga);
+per.addEventListener("click", perfil);
 fil.addEventListener("click", filtro);
+
+
+
 
 
 }
