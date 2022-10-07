@@ -1,4 +1,3 @@
-banco de dados republicas
 CREATE DATABASE republicas;
 
 
