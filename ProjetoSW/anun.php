@@ -1,8 +1,12 @@
 <?php
 session_start();
-if (isset($_GET['criou']) && $_GET['criou'] == 1) {
-  $_SESSION['criada'] = 1;
+
+if (!isset($_SESSION['autenticado']) || $_SESSION=='nao') 
+{
+  header("location: index.php?log=nao");
+  die();
 }
+
 
 ?>
 <!DOCTYPE html>
@@ -48,15 +52,18 @@ if (isset($_GET['criou']) && $_GET['criou'] == 1) {
           <li class="nav-item li-pri" id="per">
             <i class="fa-solid fa-user perfil" id="perfil"></i>
             <div class="caixa-login-some" id="login">
-              <ul>
-                <li>
-                  <a href="login.html" target="_self" class="entrar">entrar</a>
-                </li>
-                <hr>
-                <li>
-                  <a href="" class="cadastre">Cadastre-se</a>
-                </li>
-              </ul>
+            <ul>
+                  <li>
+                    <a href="login.php" target="_self" class="entrar">conta</a>
+                  </li>
+                  <hr>
+                  <li>
+                    <a href="cadastrar.php" class="cadastre">anunciar vaga</a>
+                  </li>
+                  <li>
+                    <a href="logoff.php" class="cadastre">sair</a>
+                  </li>
+                </ul>
             </div>
           </li>
 
@@ -106,6 +113,7 @@ if (isset($_GET['criou']) && $_GET['criou'] == 1) {
             </textarea>
         <button type="submit" class="envia_f">proxímo</button>
       </div>
+
     </form>
   </section>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
