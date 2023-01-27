@@ -24,4 +24,4 @@ create table images (
     id_usuarioD int not null, 
     id_imagem int not null, 
     FOREIGN KEY(id_isuarioD) references login(id_usuario) FOREIGN KEY(id_imagem) references info_m(id_matricula) 
-);
+); 
